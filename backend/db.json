@@ -1,0 +1,1810 @@
+{
+  "version": "2.0.0",
+  "stakeholders": [
+    {
+      "id": "USR-BIZ-01",
+      "name": "Rajesh Agrawal",
+      "company": "Apex Weighing & Logistics Ltd",
+      "role": "business",
+      "category": "Commercial Trader & Logistics",
+      "email": "compliance@apexlogistics.mock",
+      "phone": "+91 98112 34567",
+      "gstin": "GSTIN07AAACA1234F1Z5",
+      "address": "Plot 42, Okhla Industrial Area Phase III, New Delhi - 110020",
+      "state": "Delhi",
+      "district": "South Delhi",
+      "instrumentsCount": 4,
+      "status": "ACTIVE"
+    },
+    {
+      "id": "USR-BIZ-02",
+      "name": "Priya Sundaram",
+      "company": "Kalyan Diamond & Gold Jewellers",
+      "role": "business",
+      "category": "Jewellery & Precious Metals",
+      "email": "standards@kalyanjewels.mock",
+      "phone": "+91 98450 99887",
+      "gstin": "GSTIN33AAACK4455Q1Z9",
+      "address": "T. Nagar Main Road, Chennai, Tamil Nadu - 600017",
+      "state": "Tamil Nadu",
+      "district": "Chennai",
+      "instrumentsCount": 3,
+      "status": "ACTIVE"
+    },
+    {
+      "id": "USR-BIZ-03",
+      "name": "Suresh Patil",
+      "company": "Bharat Agro Grain Terminals",
+      "role": "business",
+      "category": "Agriculture & Bulk Commodity",
+      "email": "ops@bharatagro.mock",
+      "phone": "+91 94220 11223",
+      "gstin": "GSTIN27AAACB7788P1Z1",
+      "address": "APMC Market Yard, Navi Mumbai, Maharashtra - 400705",
+      "state": "Maharashtra",
+      "district": "Thane",
+      "instrumentsCount": 5,
+      "status": "ACTIVE"
+    },
+    {
+      "id": "LMO-01",
+      "name": "Insp. Rajesh Sharma",
+      "role": "lmo",
+      "designation": "Legal Metrology Officer (LMO)",
+      "email": "rajesh.sharma.lmo@doca.gov.in",
+      "phone": "+91 98711 00223",
+      "zone": "North Zone - Delhi NCR",
+      "district": "South Delhi",
+      "badgeNumber": "DOCA-LM-1092",
+      "stampingKitId": "STAMP-KIT-DL-44",
+      "inspectionsCompleted": 342,
+      "activeAssigned": 4,
+      "status": "ACTIVE"
+    },
+    {
+      "id": "LMO-02",
+      "name": "Insp. Ananya Deshmukh",
+      "role": "lmo",
+      "designation": "Legal Metrology Officer (LMO)",
+      "email": "ananya.deshmukh.lmo@doca.gov.in",
+      "phone": "+91 94230 44556",
+      "zone": "West Zone - Maharashtra",
+      "district": "Thane",
+      "badgeNumber": "DOCA-LM-2041",
+      "stampingKitId": "STAMP-KIT-MH-12",
+      "inspectionsCompleted": 418,
+      "activeAssigned": 3,
+      "status": "ACTIVE"
+    },
+    {
+      "id": "LMO-03",
+      "name": "Insp. K. Venkatesh",
+      "role": "lmo",
+      "designation": "Senior Inspector of Legal Metrology",
+      "email": "k.venkatesh.lmo@doca.gov.in",
+      "phone": "+91 98400 33221",
+      "zone": "South Zone - Tamil Nadu",
+      "district": "Chennai",
+      "badgeNumber": "DOCA-LM-3015",
+      "stampingKitId": "STAMP-KIT-TN-08",
+      "inspectionsCompleted": 512,
+      "activeAssigned": 2,
+      "status": "ACTIVE"
+    },
+    {
+      "id": "GATC-01",
+      "name": "National Metrology Standards Lab - GATC North",
+      "role": "gatc",
+      "labName": "GATC Precision Testing & Calibration Centre",
+      "labCode": "GATC-DL-001",
+      "accreditationNo": "NABL-CC-2891 / DoCA-GATC-2024-09",
+      "directorName": "Dr. V. K. Ramanathan",
+      "email": "calibration@gatcnorth.org.in",
+      "phone": "+91 11 2658 9012",
+      "address": "CSIR Complex, Pusa Road, New Delhi - 110012",
+      "state": "Delhi",
+      "status": "ACCREDITED"
+    },
+    {
+      "id": "USR-ADM-01",
+      "name": "Dr. Anand Swaroop, IAS",
+      "role": "admin",
+      "designation": "Joint Secretary & Legal Metrology Controller",
+      "email": "controller.metrology@doca.gov.in",
+      "phone": "+91 11 2338 1234",
+      "department": "Department of Consumer Affairs (DoCA), Ministry of Consumer Affairs, Food & Public Distribution",
+      "office": "Krishi Bhawan, New Delhi - 110001",
+      "status": "ACTIVE"
+    }
+  ],
+  "instruments": [
+    {
+      "id": "INST-2026-001",
+      "type": "Electronic Retail Weighing Scale",
+      "category": "Commercial Weighing",
+      "manufacturer": "Avery India Ltd",
+      "model": "EL-900 Plus Dual Display",
+      "serialNumber": "AV-2024-8841",
+      "maxCapacity": "30 kg",
+      "minCapacity": "100 g",
+      "verificationInterval": "5 g",
+      "accuracyClass": "Class III (Medium Accuracy)",
+      "ownerName": "Apex Weighing & Logistics Ltd",
+      "ownerTraderId": "USR-BIZ-01",
+      "ownerEmail": "compliance@apexlogistics.mock",
+      "businessRegNo": "GSTIN07AAACA1234F1Z5",
+      "location": "Okhla Phase III Retail Hub, New Delhi",
+      "state": "Delhi",
+      "district": "South Delhi",
+      "latitude": "28.5355",
+      "longitude": "77.2710",
+      "registrationDate": "2025-01-10",
+      "status": "VERIFIED",
+      "activeCertificateId": "CERT-2026-008",
+      "lastVerifiedDate": "2026-09-05",
+      "expiryDate": "2027-09-05",
+      "stampingNumber": "LM-DL-2026-6751",
+      "verificationFeePaid": true,
+      "patternApprovalNo": "IND-LM-PA-2023-412",
+      "applicationId": "APP-2026-105"
+    },
+    {
+      "id": "INST-2026-002",
+      "type": "Heavy Duty Electronic Weighbridge",
+      "category": "Industrial Weighing",
+      "manufacturer": "Eagle Scales Pvt Ltd",
+      "model": "WB-Pro 60T Pitless Weighbridge",
+      "serialNumber": "EG-2025-5520",
+      "maxCapacity": "60 Tonnes",
+      "minCapacity": "200 kg",
+      "verificationInterval": "10 kg",
+      "accuracyClass": "Class IV (Ordinary Accuracy)",
+      "ownerName": "Apex Weighing & Logistics Ltd",
+      "ownerTraderId": "USR-BIZ-01",
+      "ownerEmail": "compliance@apexlogistics.mock",
+      "businessRegNo": "GSTIN07AAACA1234F1Z5",
+      "location": "Container Freight Station, Tughlakabad, South Delhi",
+      "state": "Delhi",
+      "district": "South Delhi",
+      "latitude": "28.5033",
+      "longitude": "77.2989",
+      "registrationDate": "2026-08-10",
+      "status": "VERIFIED",
+      "activeCertificateId": "CERT-2026-009",
+      "lastVerifiedDate": "2026-09-05",
+      "expiryDate": "2027-09-05",
+      "stampingNumber": "LM-DL-2026-6666",
+      "verificationFeePaid": true,
+      "patternApprovalNo": "IND-LM-PA-2022-108",
+      "applicationId": "APP-2026-101"
+    },
+    {
+      "id": "INST-2026-003",
+      "type": "Multi-Product Fuel Dispenser (MPD)",
+      "category": "Petroleum & Liquid Volume",
+      "manufacturer": "Tokheim India Corp",
+      "model": "Quantium 510 MPD 4-Hose",
+      "serialNumber": "TK-2023-1109",
+      "maxCapacity": "80 L/min",
+      "minCapacity": "2 L/min",
+      "verificationInterval": "0.01 L",
+      "accuracyClass": "Class 0.5 (Liquid Fuel Standards)",
+      "ownerName": "Apex Weighing & Logistics Ltd",
+      "ownerTraderId": "USR-BIZ-01",
+      "ownerEmail": "compliance@apexlogistics.mock",
+      "businessRegNo": "GSTIN07AAACA1234F1Z5",
+      "location": "Ring Road Commercial Fuel Station, AIIMS South, New Delhi",
+      "state": "Delhi",
+      "district": "South Delhi",
+      "latitude": "28.5672",
+      "longitude": "77.2100",
+      "registrationDate": "2024-08-20",
+      "status": "VERIFIED",
+      "activeCertificateId": "CERT-2026-010",
+      "lastVerifiedDate": "2026-09-05",
+      "expiryDate": "2027-09-05",
+      "stampingNumber": "LM-DL-2026-5411",
+      "verificationFeePaid": true,
+      "patternApprovalNo": "IND-LM-PA-2021-089",
+      "applicationId": "APP-2026-106"
+    },
+    {
+      "id": "INST-2026-004",
+      "type": "Automatic Gravimetric Filling Machine",
+      "category": "Packaging & Automated Filling",
+      "manufacturer": "Nichrome Packaging Solutions",
+      "model": "Excel 400 Gravimetric Packer",
+      "serialNumber": "NC-2023-0042",
+      "maxCapacity": "5 kg",
+      "minCapacity": "250 g",
+      "verificationInterval": "1 g",
+      "accuracyClass": "Class II (High Accuracy)",
+      "ownerName": "Apex Weighing & Logistics Ltd",
+      "ownerTraderId": "USR-BIZ-01",
+      "ownerEmail": "compliance@apexlogistics.mock",
+      "businessRegNo": "GSTIN07AAACA1234F1Z5",
+      "location": "Warehouse #7, Badarpur Border, New Delhi",
+      "state": "Delhi",
+      "district": "South Delhi",
+      "latitude": "28.4912",
+      "longitude": "77.3045",
+      "registrationDate": "2023-11-01",
+      "status": "VERIFIED",
+      "activeCertificateId": "CERT-2026-011",
+      "lastVerifiedDate": "2026-09-05",
+      "expiryDate": "2027-09-05",
+      "stampingNumber": "LM-DL-2026-9827",
+      "verificationFeePaid": true,
+      "patternApprovalNo": "IND-LM-PA-2020-055",
+      "applicationId": "APP-2026-107"
+    },
+    {
+      "id": "INST-2026-005",
+      "type": "High-Precision Micro-Analytical Balance",
+      "category": "Jewellery & Precious Metals",
+      "manufacturer": "Sartorius India",
+      "model": "Secura 225D-1S Micro-Balance",
+      "serialNumber": "SR-2025-7890",
+      "maxCapacity": "220 g",
+      "minCapacity": "1 mg",
+      "verificationInterval": "0.1 mg",
+      "accuracyClass": "Class I (Special Precision)",
+      "ownerName": "Kalyan Diamond & Gold Jewellers",
+      "ownerTraderId": "USR-BIZ-02",
+      "ownerEmail": "standards@kalyanjewels.mock",
+      "businessRegNo": "GSTIN33AAACK4455Q1Z9",
+      "location": "Showroom #3, T. Nagar Main Road, Chennai",
+      "state": "Tamil Nadu",
+      "district": "Chennai",
+      "latitude": "13.0418",
+      "longitude": "80.2341",
+      "registrationDate": "2026-08-15",
+      "status": "VERIFIED",
+      "activeCertificateId": "CERT-2026-006",
+      "lastVerifiedDate": "2026-09-05",
+      "expiryDate": "2027-09-05",
+      "stampingNumber": "LM-TN-2026-2793",
+      "verificationFeePaid": true,
+      "patternApprovalNo": "IND-LM-PA-2024-901",
+      "applicationId": "APP-2026-102"
+    },
+    {
+      "id": "INST-2026-006",
+      "type": "Mechanical Bulk Grain Hopper Scale",
+      "category": "Agriculture & Bulk Commodity",
+      "manufacturer": "Essae-Teraoka Ltd",
+      "model": "DS-215 Grain Hopper 10T",
+      "serialNumber": "ES-2024-3319",
+      "maxCapacity": "10 Tonnes",
+      "minCapacity": "50 kg",
+      "verificationInterval": "2 kg",
+      "accuracyClass": "Class III (Medium Accuracy)",
+      "ownerName": "Bharat Agro Grain Terminals",
+      "ownerTraderId": "USR-BIZ-03",
+      "ownerEmail": "ops@bharatagro.mock",
+      "businessRegNo": "GSTIN27AAACB7788P1Z1",
+      "location": "Silo Yard 4, APMC Market Yard, Navi Mumbai",
+      "state": "Maharashtra",
+      "district": "Thane",
+      "latitude": "19.0760",
+      "longitude": "72.9977",
+      "registrationDate": "2025-03-12",
+      "status": "VERIFIED",
+      "activeCertificateId": "CERT-2025-331",
+      "lastVerifiedDate": "2025-03-20",
+      "expiryDate": "2026-03-19",
+      "stampingNumber": "LM-MH-2025-3319",
+      "verificationFeePaid": true,
+      "patternApprovalNo": "IND-LM-PA-2022-772",
+      "applicationId": "APP-2025-219"
+    },
+    {
+      "id": "INST-2026-007",
+      "type": "Industrial Crane Scale",
+      "category": "Industrial Weighing",
+      "manufacturer": "Kran Weigh Systems",
+      "model": "KW-15T Wireless Crane Scale",
+      "serialNumber": "KW-2025-9901",
+      "maxCapacity": "15 Tonnes",
+      "minCapacity": "100 kg",
+      "verificationInterval": "5 kg",
+      "accuracyClass": "Class III (Medium Accuracy)",
+      "ownerName": "Bharat Agro Grain Terminals",
+      "ownerTraderId": "USR-BIZ-03",
+      "ownerEmail": "ops@bharatagro.mock",
+      "businessRegNo": "GSTIN27AAACB7788P1Z1",
+      "location": "Wharf #2, Navi Mumbai Port Logistics",
+      "state": "Maharashtra",
+      "district": "Thane",
+      "latitude": "18.9500",
+      "longitude": "72.9500",
+      "registrationDate": "2026-08-20",
+      "status": "REGISTERED",
+      "activeCertificateId": null,
+      "lastVerifiedDate": null,
+      "expiryDate": null,
+      "stampingNumber": null,
+      "verificationFeePaid": false,
+      "patternApprovalNo": "IND-LM-PA-2024-311",
+      "applicationId": null
+    }
+  ],
+  "applications": [
+    {
+      "id": "APP-2026-107",
+      "instrumentId": "INST-2026-004",
+      "instrumentName": "Automatic Gravimetric Filling Machine (Excel 400 Gravimetric Packer)",
+      "instrumentType": "Automatic Gravimetric Filling Machine",
+      "applicantName": "Apex Weighing & Logistics Ltd",
+      "applicantTraderId": "USR-BIZ-01",
+      "applicantEmail": "compliance@apexlogistics.mock",
+      "contactPhone": "+91 98112 34567",
+      "applicationType": "Periodic Annual Re-verification",
+      "accuracyClass": "Class II (High Accuracy)",
+      "premiseAddress": "Warehouse #7, Badarpur Border, New Delhi",
+      "state": "Delhi",
+      "district": "South Delhi",
+      "submittedDate": "2026-09-05",
+      "status": "COMPLETED",
+      "feeAmount": "₹ 2,000",
+      "feeBreakdown": {
+        "verificationFee": "₹ 1,700",
+        "stampingSealFee": "₹ 200",
+        "portalProcessingFee": "₹ 100"
+      },
+      "feeTransactionId": "TXN-BHARATKOSH-5323892",
+      "paymentStatus": "PAID",
+      "assignedOfficerId": null,
+      "assignedOfficerName": null,
+      "scheduledDate": null,
+      "scheduledTimeSlot": null,
+      "remarks": "Annual re-verification requested. Instrument available at site. | Preferred Slot: 2026-09-16 (10:30 AM - 01:00 PM)",
+      "history": [
+        {
+          "date": "2026-09-05 09:35 pm",
+          "event": "Application submitted online with fee payment receipt"
+        },
+        {
+          "date": "2026-09-05 09:35 pm",
+          "event": "Field verification PASSED. Seal Tag LM-DL-2026-9827 applied. Certificate IND-LM-2026-DL-89251 issued."
+        }
+      ]
+    },
+    {
+      "id": "APP-2026-106",
+      "instrumentId": "INST-2026-003",
+      "instrumentName": "Multi-Product Fuel Dispenser (MPD) (Quantium 510 MPD 4-Hose)",
+      "instrumentType": "Multi-Product Fuel Dispenser (MPD)",
+      "applicantName": "Apex Weighing & Logistics Ltd",
+      "applicantTraderId": "USR-BIZ-01",
+      "applicantEmail": "compliance@apexlogistics.mock",
+      "contactPhone": "+91 98112 34567",
+      "applicationType": "Periodic Annual Re-verification",
+      "accuracyClass": "Class 0.5 (Liquid Fuel Standards)",
+      "premiseAddress": "Ring Road Commercial Fuel Station, AIIMS South, New Delhi",
+      "state": "Delhi",
+      "district": "South Delhi",
+      "submittedDate": "2026-09-05",
+      "status": "COMPLETED",
+      "feeAmount": "₹ 2,500",
+      "feeBreakdown": {
+        "verificationFee": "₹ 2,200",
+        "stampingSealFee": "₹ 200",
+        "portalProcessingFee": "₹ 100"
+      },
+      "feeTransactionId": "TXN-BHARATKOSH-4811421",
+      "paymentStatus": "PAID",
+      "assignedOfficerId": "LMO-02",
+      "assignedOfficerName": "Insp. Ananya Deshmukh",
+      "scheduledDate": "2026-09-14",
+      "scheduledTimeSlot": "10:30 AM - 01:00 PM",
+      "remarks": "Approved by Controller for on-site physical verification and stamping.",
+      "history": [
+        {
+          "date": "2026-09-05 09:22 pm",
+          "event": "Application submitted online with fee payment receipt"
+        },
+        {
+          "date": "2026-09-05 09:22 pm",
+          "event": "Reviewed & scheduled for 2026-09-14 (10:30 AM - 01:00 PM) with Insp. Ananya Deshmukh"
+        },
+        {
+          "date": "2026-09-05 09:22 pm",
+          "event": "Reviewed & scheduled for 2026-09-14 (10:30 AM - 01:00 PM) with Insp. Ananya Deshmukh"
+        },
+        {
+          "date": "2026-09-05 09:22 pm",
+          "event": "Reviewed & scheduled for 2026-09-14 (10:30 AM - 01:00 PM) with Insp. Ananya Deshmukh"
+        },
+        {
+          "date": "2026-09-05 09:25 pm",
+          "event": "Field verification PASSED. Seal Tag LM-DL-2026-2456 applied. Certificate IND-LM-2026-DL-38315 issued."
+        },
+        {
+          "date": "2026-09-05 09:33 pm",
+          "event": "Field verification PASSED. Seal Tag LM-DL-2026-5411 applied. Certificate IND-LM-2026-DL-85117 issued."
+        }
+      ]
+    },
+    {
+      "id": "APP-2026-105",
+      "instrumentId": "INST-2026-001",
+      "instrumentName": "Electronic Retail Weighing Scale (EL-900 Plus Dual Display)",
+      "instrumentType": "Electronic Retail Weighing Scale",
+      "applicantName": "Apex Weighing & Logistics Ltd",
+      "applicantTraderId": "USR-BIZ-01",
+      "applicantEmail": "compliance@apexlogistics.mock",
+      "contactPhone": "+91 98112 34567",
+      "applicationType": "First-time Initial Stamping & Verification",
+      "accuracyClass": "Class III (Medium Accuracy)",
+      "premiseAddress": "Okhla Phase III Retail Hub, New Delhi",
+      "state": "Delhi",
+      "district": "South Delhi",
+      "submittedDate": "2026-09-05",
+      "status": "COMPLETED",
+      "feeAmount": "₹ 2,000",
+      "feeBreakdown": {
+        "verificationFee": "₹ 1,700",
+        "stampingSealFee": "₹ 200",
+        "portalProcessingFee": "₹ 100"
+      },
+      "feeTransactionId": "TXN-BHARATKOSH-3522414",
+      "paymentStatus": "PAID",
+      "assignedOfficerId": "LMO-01",
+      "assignedOfficerName": "Insp. Rajesh Sharma",
+      "scheduledDate": "2026-09-27",
+      "scheduledTimeSlot": "10:30 AM - 01:00 PM",
+      "remarks": "Approved by Controller for on-site physical verification and stamping.",
+      "history": [
+        {
+          "date": "2026-09-05 08:56 PM",
+          "event": "Application submitted online with fee payment receipt"
+        },
+        {
+          "date": "2026-09-05 09:14 pm",
+          "event": "Reviewed & scheduled for 2026-08-27 (10:30 AM - 01:00 PM) with Insp. K. Venkatesh"
+        },
+        {
+          "date": "2026-09-05 09:18 pm",
+          "event": "Reviewed & scheduled for 2026-09-27 (10:30 AM - 01:00 PM) with Insp. Rajesh Sharma"
+        },
+        {
+          "date": "2026-09-05 09:25 pm",
+          "event": "Field verification PASSED. Seal Tag LM-DL-2026-6751 applied. Certificate IND-LM-2026-DL-89180 issued."
+        }
+      ]
+    },
+    {
+      "id": "APP-2026-101",
+      "instrumentId": "INST-2026-002",
+      "instrumentName": "Heavy Duty Electronic Weighbridge 60T (Apex Logistics CFS)",
+      "instrumentType": "Heavy Duty Electronic Weighbridge",
+      "applicantName": "Apex Weighing & Logistics Ltd",
+      "applicantTraderId": "USR-BIZ-01",
+      "applicantEmail": "compliance@apexlogistics.mock",
+      "contactPhone": "+91 98112 34567",
+      "applicationType": "First-time Initial Stamping & Verification",
+      "accuracyClass": "Class IV (Ordinary Accuracy)",
+      "premiseAddress": "Container Freight Station, Tughlakabad, South Delhi - 110044",
+      "state": "Delhi",
+      "district": "South Delhi",
+      "submittedDate": "2026-08-18",
+      "status": "COMPLETED",
+      "feeAmount": "₹ 4,500",
+      "feeBreakdown": {
+        "verificationFee": "₹ 4,000",
+        "stampingSealFee": "₹ 300",
+        "portalProcessingFee": "₹ 200"
+      },
+      "feeTransactionId": "TXN-BHARATKOSH-9842104",
+      "paymentStatus": "PAID",
+      "assignedOfficerId": "GATC-01",
+      "assignedOfficerName": "National Metrology Standards Lab - GATC North",
+      "scheduledDate": "2026-08-27",
+      "scheduledTimeSlot": "04:30 PM - 06:30 PM",
+      "remarks": "Approved by Controller for on-site physical verification and stamping.",
+      "history": [
+        {
+          "date": "2026-08-18 10:30 AM",
+          "event": "Application submitted with online Bharatkosh payment receipt"
+        },
+        {
+          "date": "2026-09-05 09:15 pm",
+          "event": "Reviewed & scheduled for 2026-08-27 (04:30 PM - 06:30 PM) with National Metrology Standards Lab - GATC North"
+        },
+        {
+          "date": "2026-09-05 09:25 pm",
+          "event": "Field verification PASSED. Seal Tag LM-DL-2026-6666 applied. Certificate IND-LM-2026-DL-21308 issued."
+        }
+      ]
+    },
+    {
+      "id": "APP-2026-102",
+      "instrumentId": "INST-2026-005",
+      "instrumentName": "High-Precision Micro-Analytical Balance 220g (Kalyan Jewellers)",
+      "instrumentType": "High-Precision Micro-Analytical Balance",
+      "applicantName": "Kalyan Diamond & Gold Jewellers",
+      "applicantTraderId": "USR-BIZ-02",
+      "applicantEmail": "standards@kalyanjewels.mock",
+      "contactPhone": "+91 98450 99887",
+      "applicationType": "Periodic Annual Re-verification",
+      "accuracyClass": "Class I (Special Precision)",
+      "premiseAddress": "Showroom #3, T. Nagar Main Road, Chennai - 600017",
+      "state": "Tamil Nadu",
+      "district": "Chennai",
+      "submittedDate": "2026-08-16",
+      "status": "COMPLETED",
+      "feeAmount": "₹ 2,000",
+      "feeBreakdown": {
+        "verificationFee": "₹ 1,700",
+        "stampingSealFee": "₹ 200",
+        "portalProcessingFee": "₹ 100"
+      },
+      "feeTransactionId": "TXN-BHARATKOSH-6632190",
+      "paymentStatus": "PAID",
+      "assignedOfficerId": "LMO-03",
+      "assignedOfficerName": "Insp. K. Venkatesh",
+      "scheduledDate": "2026-08-26",
+      "scheduledTimeSlot": "10:30 AM - 01:00 PM",
+      "remarks": "Admin approved for physical on-site audit. Standard class E2 weights required.",
+      "history": [
+        {
+          "date": "2026-08-16 02:15 PM",
+          "event": "Application submitted by applicant"
+        },
+        {
+          "date": "2026-08-17 11:00 AM",
+          "event": "Application reviewed & approved by Legal Metrology Admin"
+        },
+        {
+          "date": "2026-08-18 09:45 AM",
+          "event": "Inspection scheduled with LMO Insp. K. Venkatesh"
+        },
+        {
+          "date": "2026-09-05 09:25 pm",
+          "event": "Field verification PASSED. Seal Tag LM-TN-2026-2793 applied. Certificate IND-LM-2026-TN-51830 issued."
+        }
+      ]
+    },
+    {
+      "id": "APP-2026-103",
+      "instrumentId": "INST-2026-001",
+      "instrumentName": "Electronic Retail Weighing Scale (Apex Logistics Retail)",
+      "instrumentType": "Electronic Retail Weighing Scale",
+      "applicantName": "Apex Weighing & Logistics Ltd",
+      "applicantTraderId": "USR-BIZ-01",
+      "applicantEmail": "compliance@apexlogistics.mock",
+      "contactPhone": "+91 98112 34567",
+      "applicationType": "Post-Repair Stamping & Recalibration",
+      "accuracyClass": "Class III (Medium Accuracy)",
+      "premiseAddress": "Okhla Phase III Retail Hub, New Delhi - 110020",
+      "state": "Delhi",
+      "district": "South Delhi",
+      "submittedDate": "2026-08-22",
+      "status": "COMPLETED",
+      "feeAmount": "₹ 800",
+      "feeBreakdown": {
+        "verificationFee": "₹ 600",
+        "stampingSealFee": "₹ 100",
+        "portalProcessingFee": "₹ 100"
+      },
+      "feeTransactionId": "TXN-BHARATKOSH-8839120",
+      "paymentStatus": "PAID",
+      "assignedOfficerId": "LMO-01",
+      "assignedOfficerName": "Insp. Rajesh Sharma",
+      "scheduledDate": "2026-08-25",
+      "scheduledTimeSlot": "02:30 PM - 04:30 PM",
+      "remarks": "Scheduled for digital field verification by Insp. Rajesh Sharma.",
+      "history": [
+        {
+          "date": "2026-08-22 09:15 AM",
+          "event": "Application submitted by applicant"
+        },
+        {
+          "date": "2026-08-22 03:30 PM",
+          "event": "Approved & Assigned to Insp. Rajesh Sharma (North Zone)"
+        },
+        {
+          "date": "2026-09-05 09:24 pm",
+          "event": "Field verification PASSED. Seal Tag LM-DL-2026-1401 applied. Certificate IND-LM-2026-DL-41259 issued."
+        }
+      ]
+    },
+    {
+      "id": "APP-2026-098",
+      "instrumentId": "INST-2026-001",
+      "instrumentName": "Electronic Retail Weighing Scale (Apex Logistics)",
+      "instrumentType": "Electronic Retail Weighing Scale",
+      "applicantName": "Apex Weighing & Logistics Ltd",
+      "applicantTraderId": "USR-BIZ-01",
+      "applicantEmail": "compliance@apexlogistics.mock",
+      "contactPhone": "+91 98112 34567",
+      "applicationType": "Periodic Annual Re-verification",
+      "accuracyClass": "Class III (Medium Accuracy)",
+      "premiseAddress": "Okhla Phase III Retail Hub, New Delhi - 110020",
+      "state": "Delhi",
+      "district": "South Delhi",
+      "submittedDate": "2026-01-10",
+      "status": "COMPLETED",
+      "feeAmount": "₹ 800",
+      "feeBreakdown": {
+        "verificationFee": "₹ 600",
+        "stampingSealFee": "₹ 100",
+        "portalProcessingFee": "₹ 100"
+      },
+      "feeTransactionId": "TXN-BHARATKOSH-1122334",
+      "paymentStatus": "PAID",
+      "assignedOfficerId": "LMO-01",
+      "assignedOfficerName": "Insp. Rajesh Sharma",
+      "scheduledDate": "2026-01-15",
+      "remarks": "Field audit passed with 0.00% error. Stamping seal LM-DL-2026-8812 applied.",
+      "history": [
+        {
+          "date": "2026-01-10 09:00 AM",
+          "event": "Application submitted"
+        },
+        {
+          "date": "2026-01-12 03:00 PM",
+          "event": "Approved & Scheduled"
+        },
+        {
+          "date": "2026-01-15 04:30 PM",
+          "event": "Physical audit completed - PASSED. Certificate CERT-2026-001 issued"
+        }
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "id": "CERT-2026-011",
+      "certificateNumber": "IND-LM-2026-DL-89251",
+      "instrumentId": "INST-2026-004",
+      "instrumentType": "Automatic Gravimetric Filling Machine",
+      "manufacturer": "Nichrome Packaging Solutions",
+      "model": "Excel 400 Gravimetric Packer",
+      "serialNumber": "NC-2023-0042",
+      "accuracyClass": "Class II (High Accuracy)",
+      "capacity": "Max: 5 kg | Min: 250 g | e: 1 g",
+      "ownerName": "Apex Weighing & Logistics Ltd",
+      "businessRegNo": "GSTIN07AAACA1234F1Z5",
+      "establishmentAddress": "Warehouse #7, Badarpur Border, New Delhi",
+      "issueDate": "2026-09-05",
+      "expiryDate": "2027-09-05",
+      "status": "VALID",
+      "stampingSealNumber": "LM-DL-2026-9827",
+      "verificationStandard": "Legal Metrology (General) Rules, 2011 - Schedule VII & Standards of Weights and Measures",
+      "issuingOfficer": "Insp. Rajesh Sharma",
+      "issuingOfficerId": "LMO-01",
+      "issuingOffice": "Office of Legal Metrology, South Delhi Division, Delhi",
+      "testResultsSummary": "All weights tested against standard Class M1 weights. Errors within statutory MPE limits. Lead stamping seal applied.",
+      "testDetails": [
+        {
+          "testPoint": "Zero Load Check",
+          "appliedLoad": "0.000 kg",
+          "observedError": "0.00 g",
+          "mpeAllowed": "±2.5 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "1/3 Max Capacity",
+          "appliedLoad": "10.000 kg",
+          "observedError": "+0.10 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "2/3 Max Capacity",
+          "appliedLoad": "20.000 kg",
+          "observedError": "+0.20 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "Full Max Capacity",
+          "appliedLoad": "30.000 kg",
+          "observedError": "+0.20 g",
+          "mpeAllowed": "±7.5 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "Eccentric Corner Test",
+          "appliedLoad": "10.000 kg",
+          "observedError": "+0.15 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        }
+      ],
+      "evidencePhotos": [
+        "photo_nameplate_verified.jpg",
+        "photo_test_load_m1.jpg",
+        "photo_stamping_seal_applied.jpg"
+      ],
+      "digitalHash": "SHA256:d6c249fb5ed597716fec361ab6996aecc33b67441de2400ea6e744b8ecaaa95d",
+      "qrVerificationUrl": "http://localhost:5173/certificate/CERT-2026-011",
+      "revocationReason": null,
+      "revokedAt": null
+    },
+    {
+      "id": "CERT-2026-010",
+      "certificateNumber": "IND-LM-2026-DL-85117",
+      "instrumentId": "INST-2026-003",
+      "instrumentType": "Multi-Product Fuel Dispenser (MPD)",
+      "manufacturer": "Tokheim India Corp",
+      "model": "Quantium 510 MPD 4-Hose",
+      "serialNumber": "TK-2023-1109",
+      "accuracyClass": "Class 0.5 (Liquid Fuel Standards)",
+      "capacity": "Max: 80 L/min | Min: 2 L/min | e: 0.01 L",
+      "ownerName": "Apex Weighing & Logistics Ltd",
+      "businessRegNo": "GSTIN07AAACA1234F1Z5",
+      "establishmentAddress": "Ring Road Commercial Fuel Station, AIIMS South, New Delhi",
+      "issueDate": "2026-09-05",
+      "expiryDate": "2027-09-05",
+      "status": "VALID",
+      "stampingSealNumber": "LM-DL-2026-5411",
+      "verificationStandard": "Legal Metrology (General) Rules, 2011 - Schedule VII & Standards of Weights and Measures",
+      "issuingOfficer": "Insp. Rajesh Sharma",
+      "issuingOfficerId": "LMO-02",
+      "issuingOffice": "Office of Legal Metrology, South Delhi Division, Delhi",
+      "testResultsSummary": "All weights tested against standard Class M1 weights. Errors within statutory MPE limits. Lead stamping seal applied.",
+      "testDetails": [
+        {
+          "testPoint": "Zero Load Check",
+          "appliedLoad": "0.000 kg",
+          "observedError": "0.00 g",
+          "mpeAllowed": "±2.5 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "1/3 Max Capacity",
+          "appliedLoad": "10.000 kg",
+          "observedError": "+0.10 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "2/3 Max Capacity",
+          "appliedLoad": "20.000 kg",
+          "observedError": "+0.20 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "Full Max Capacity",
+          "appliedLoad": "30.000 kg",
+          "observedError": "+0.20 g",
+          "mpeAllowed": "±7.5 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "Eccentric Corner Test",
+          "appliedLoad": "10.000 kg",
+          "observedError": "+0.15 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        }
+      ],
+      "evidencePhotos": [
+        "photo_nameplate_verified.jpg",
+        "photo_test_load_m1.jpg",
+        "photo_stamping_seal_applied.jpg"
+      ],
+      "digitalHash": "SHA256:58714d3e130f8a402c9fa592568d5fb51699198aa866b87cec58c15dadffdcda",
+      "qrVerificationUrl": "http://localhost:5173/certificate/CERT-2026-010",
+      "revocationReason": null,
+      "revokedAt": null
+    },
+    {
+      "id": "CERT-2026-009",
+      "certificateNumber": "IND-LM-2026-DL-21308",
+      "instrumentId": "INST-2026-002",
+      "instrumentType": "Heavy Duty Electronic Weighbridge",
+      "manufacturer": "Eagle Scales Pvt Ltd",
+      "model": "WB-Pro 60T Pitless Weighbridge",
+      "serialNumber": "EG-2025-5520",
+      "accuracyClass": "Class IV (Ordinary Accuracy)",
+      "capacity": "Max: 60 Tonnes | Min: 200 kg | e: 10 kg",
+      "ownerName": "Apex Weighing & Logistics Ltd",
+      "businessRegNo": "GSTIN07AAACA1234F1Z5",
+      "establishmentAddress": "Container Freight Station, Tughlakabad, South Delhi - 110044",
+      "issueDate": "2026-09-05",
+      "expiryDate": "2027-09-05",
+      "status": "VALID",
+      "stampingSealNumber": "LM-DL-2026-6666",
+      "verificationStandard": "Legal Metrology (General) Rules, 2011 - Schedule VII & Standards of Weights and Measures",
+      "issuingOfficer": "Insp. Rajesh Sharma",
+      "issuingOfficerId": "GATC-01",
+      "issuingOffice": "Office of Legal Metrology, South Delhi Division, Delhi",
+      "testResultsSummary": "All weights tested against standard Class M1 weights. Errors within statutory MPE limits. Lead stamping seal applied.",
+      "testDetails": [
+        {
+          "testPoint": "Zero Load Check",
+          "appliedLoad": "0.000 kg",
+          "observedError": "0.00 g",
+          "mpeAllowed": "±2.5 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "1/3 Max Capacity",
+          "appliedLoad": "10.000 kg",
+          "observedError": "+0.10 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "2/3 Max Capacity",
+          "appliedLoad": "20.000 kg",
+          "observedError": "+0.20 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "Full Max Capacity",
+          "appliedLoad": "30.000 kg",
+          "observedError": "+0.20 g",
+          "mpeAllowed": "±7.5 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "Eccentric Corner Test",
+          "appliedLoad": "10.000 kg",
+          "observedError": "+0.15 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        }
+      ],
+      "evidencePhotos": [
+        "photo_nameplate_verified.jpg",
+        "photo_test_load_m1.jpg",
+        "photo_stamping_seal_applied.jpg"
+      ],
+      "digitalHash": "SHA256:642c7fef8ab1f53e17f708cd5b590953123e8cdce076062d045458be4e0ab0cc",
+      "qrVerificationUrl": "http://localhost:5173/certificate/CERT-2026-009",
+      "revocationReason": null,
+      "revokedAt": null
+    },
+    {
+      "id": "CERT-2026-008",
+      "certificateNumber": "IND-LM-2026-DL-89180",
+      "instrumentId": "INST-2026-001",
+      "instrumentType": "Electronic Retail Weighing Scale",
+      "manufacturer": "Avery India Ltd",
+      "model": "EL-900 Plus Dual Display",
+      "serialNumber": "AV-2024-8841",
+      "accuracyClass": "Class III (Medium Accuracy)",
+      "capacity": "Max: 30 kg | Min: 100 g | e: 5 g",
+      "ownerName": "Apex Weighing & Logistics Ltd",
+      "businessRegNo": "GSTIN07AAACA1234F1Z5",
+      "establishmentAddress": "Okhla Phase III Retail Hub, New Delhi",
+      "issueDate": "2026-09-05",
+      "expiryDate": "2027-09-05",
+      "status": "VALID",
+      "stampingSealNumber": "LM-DL-2026-6751",
+      "verificationStandard": "Legal Metrology (General) Rules, 2011 - Schedule VII & Standards of Weights and Measures",
+      "issuingOfficer": "Insp. Rajesh Sharma",
+      "issuingOfficerId": "LMO-01",
+      "issuingOffice": "Office of Legal Metrology, South Delhi Division, Delhi",
+      "testResultsSummary": "All weights tested against standard Class M1 weights. Errors within statutory MPE limits. Lead stamping seal applied.",
+      "testDetails": [
+        {
+          "testPoint": "Zero Load Check",
+          "appliedLoad": "0.000 kg",
+          "observedError": "0.00 g",
+          "mpeAllowed": "±2.5 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "1/3 Max Capacity",
+          "appliedLoad": "10.000 kg",
+          "observedError": "+0.10 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "2/3 Max Capacity",
+          "appliedLoad": "20.000 kg",
+          "observedError": "+0.20 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "Full Max Capacity",
+          "appliedLoad": "30.000 kg",
+          "observedError": "+0.20 g",
+          "mpeAllowed": "±7.5 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "Eccentric Corner Test",
+          "appliedLoad": "10.000 kg",
+          "observedError": "+0.15 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        }
+      ],
+      "evidencePhotos": [
+        "photo_nameplate_verified.jpg",
+        "photo_test_load_m1.jpg",
+        "photo_stamping_seal_applied.jpg"
+      ],
+      "digitalHash": "SHA256:71262befbfd0e8ab674dc20f11a70cc836ad7649384ac44f2884428a253a8664",
+      "qrVerificationUrl": "http://localhost:5173/certificate/CERT-2026-008",
+      "revocationReason": null,
+      "revokedAt": null
+    },
+    {
+      "id": "CERT-2026-007",
+      "certificateNumber": "IND-LM-2026-DL-38315",
+      "instrumentId": "INST-2026-003",
+      "instrumentType": "Multi-Product Fuel Dispenser (MPD)",
+      "manufacturer": "Tokheim India Corp",
+      "model": "Quantium 510 MPD 4-Hose",
+      "serialNumber": "TK-2023-1109",
+      "accuracyClass": "Class 0.5 (Liquid Fuel Standards)",
+      "capacity": "Max: 80 L/min | Min: 2 L/min | e: 0.01 L",
+      "ownerName": "Apex Weighing & Logistics Ltd",
+      "businessRegNo": "GSTIN07AAACA1234F1Z5",
+      "establishmentAddress": "Ring Road Commercial Fuel Station, AIIMS South, New Delhi",
+      "issueDate": "2026-09-05",
+      "expiryDate": "2027-09-05",
+      "status": "VALID",
+      "stampingSealNumber": "LM-DL-2026-2456",
+      "verificationStandard": "Legal Metrology (General) Rules, 2011 - Schedule VII & Standards of Weights and Measures",
+      "issuingOfficer": "Insp. Rajesh Sharma",
+      "issuingOfficerId": "LMO-02",
+      "issuingOffice": "Office of Legal Metrology, South Delhi Division, Delhi",
+      "testResultsSummary": "All weights tested against standard Class M1 weights. Errors within statutory MPE limits. Lead stamping seal applied.",
+      "testDetails": [
+        {
+          "testPoint": "Zero Load Check",
+          "appliedLoad": "0.000 kg",
+          "observedError": "0.00 g",
+          "mpeAllowed": "±2.5 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "1/3 Max Capacity",
+          "appliedLoad": "10.000 kg",
+          "observedError": "+0.10 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "2/3 Max Capacity",
+          "appliedLoad": "20.000 kg",
+          "observedError": "+0.20 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "Full Max Capacity",
+          "appliedLoad": "30.000 kg",
+          "observedError": "+0.20 g",
+          "mpeAllowed": "±7.5 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "Eccentric Corner Test",
+          "appliedLoad": "10.000 kg",
+          "observedError": "+0.15 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        }
+      ],
+      "evidencePhotos": [
+        "photo_nameplate_verified.jpg",
+        "photo_test_load_m1.jpg",
+        "photo_stamping_seal_applied.jpg"
+      ],
+      "digitalHash": "SHA256:34b6503cd094933930b56263ae914f5e7691994c25bfd2f1dfb81d0880712902",
+      "qrVerificationUrl": "http://localhost:5173/certificate/CERT-2026-007",
+      "revocationReason": null,
+      "revokedAt": null
+    },
+    {
+      "id": "CERT-2026-006",
+      "certificateNumber": "IND-LM-2026-TN-51830",
+      "instrumentId": "INST-2026-005",
+      "instrumentType": "High-Precision Micro-Analytical Balance",
+      "manufacturer": "Sartorius India",
+      "model": "Secura 225D-1S Micro-Balance",
+      "serialNumber": "SR-2025-7890",
+      "accuracyClass": "Class I (Special Precision)",
+      "capacity": "Max: 220 g | Min: 1 mg | e: 0.1 mg",
+      "ownerName": "Kalyan Diamond & Gold Jewellers",
+      "businessRegNo": "GSTIN33AAACK4455Q1Z9",
+      "establishmentAddress": "Showroom #3, T. Nagar Main Road, Chennai - 600017",
+      "issueDate": "2026-09-05",
+      "expiryDate": "2027-09-05",
+      "status": "VALID",
+      "stampingSealNumber": "LM-TN-2026-2793",
+      "verificationStandard": "Legal Metrology (General) Rules, 2011 - Schedule VII & Standards of Weights and Measures",
+      "issuingOfficer": "Insp. Rajesh Sharma",
+      "issuingOfficerId": "LMO-03",
+      "issuingOffice": "Office of Legal Metrology, Chennai Division, Tamil Nadu",
+      "testResultsSummary": "All weights tested against standard Class M1 weights. Errors within statutory MPE limits. Lead stamping seal applied.",
+      "testDetails": [
+        {
+          "testPoint": "Zero Load Check",
+          "appliedLoad": "0.000 kg",
+          "observedError": "0.00 g",
+          "mpeAllowed": "±2.5 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "1/3 Max Capacity",
+          "appliedLoad": "10.000 kg",
+          "observedError": "+0.10 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "2/3 Max Capacity",
+          "appliedLoad": "20.000 kg",
+          "observedError": "+0.20 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "Full Max Capacity",
+          "appliedLoad": "30.000 kg",
+          "observedError": "+0.20 g",
+          "mpeAllowed": "±7.5 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "Eccentric Corner Test",
+          "appliedLoad": "10.000 kg",
+          "observedError": "+0.15 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        }
+      ],
+      "evidencePhotos": [
+        "photo_nameplate_verified.jpg",
+        "photo_test_load_m1.jpg",
+        "photo_stamping_seal_applied.jpg"
+      ],
+      "digitalHash": "SHA256:63c1e6e3ce7458f955c52d45504523a1eb53e6f95504bfc3d4fabb6b275a3649",
+      "qrVerificationUrl": "http://localhost:5173/certificate/CERT-2026-006",
+      "revocationReason": null,
+      "revokedAt": null
+    },
+    {
+      "id": "CERT-2026-005",
+      "certificateNumber": "IND-LM-2026-DL-41259",
+      "instrumentId": "INST-2026-001",
+      "instrumentType": "Electronic Retail Weighing Scale",
+      "manufacturer": "Avery India Ltd",
+      "model": "EL-900 Plus Dual Display",
+      "serialNumber": "AV-2024-8841",
+      "accuracyClass": "Class III (Medium Accuracy)",
+      "capacity": "Max: 30 kg | Min: 100 g | e: 5 g",
+      "ownerName": "Apex Weighing & Logistics Ltd",
+      "businessRegNo": "GSTIN07AAACA1234F1Z5",
+      "establishmentAddress": "Okhla Phase III Retail Hub, New Delhi - 110020",
+      "issueDate": "2026-09-05",
+      "expiryDate": "2027-09-05",
+      "status": "VALID",
+      "stampingSealNumber": "LM-DL-2026-1401",
+      "verificationStandard": "Legal Metrology (General) Rules, 2011 - Schedule VII & Standards of Weights and Measures",
+      "issuingOfficer": "Insp. Rajesh Sharma",
+      "issuingOfficerId": "LMO-01",
+      "issuingOffice": "Office of Legal Metrology, South Delhi Division, Delhi",
+      "testResultsSummary": "All weights tested against standard Class M1 weights. Errors within statutory MPE limits. Lead stamping seal applied.",
+      "testDetails": [
+        {
+          "testPoint": "Zero Load Check",
+          "appliedLoad": "0.000 kg",
+          "observedError": "0.00 g",
+          "mpeAllowed": "±2.5 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "1/3 Max Capacity",
+          "appliedLoad": "10.000 kg",
+          "observedError": "+0.10 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "2/3 Max Capacity",
+          "appliedLoad": "20.000 kg",
+          "observedError": "+0.20 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "Full Max Capacity",
+          "appliedLoad": "30.000 kg",
+          "observedError": "+0.20 g",
+          "mpeAllowed": "±7.5 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "Eccentric Corner Test",
+          "appliedLoad": "10.000 kg",
+          "observedError": "+0.15 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        }
+      ],
+      "evidencePhotos": [
+        "photo_nameplate_verified.jpg",
+        "photo_test_load_m1.jpg",
+        "photo_stamping_seal_applied.jpg"
+      ],
+      "digitalHash": "SHA256:2ba6f579348ebc3b472fcd2ca479ce7c71d6dbc1c4950b065052b8099b216ea6",
+      "qrVerificationUrl": "http://localhost:5173/certificate/CERT-2026-005",
+      "revocationReason": null,
+      "revokedAt": null
+    },
+    {
+      "id": "CERT-2026-001",
+      "certificateNumber": "IND-LM-2026-DL-88492",
+      "instrumentId": "INST-2026-001",
+      "instrumentType": "Electronic Retail Weighing Scale",
+      "manufacturer": "Avery India Ltd",
+      "model": "EL-900 Plus Dual Display",
+      "serialNumber": "AV-2024-8841",
+      "accuracyClass": "Class III (Medium Accuracy)",
+      "capacity": "Max: 30 kg | Min: 100 g | e: 5 g",
+      "ownerName": "Apex Weighing & Logistics Ltd",
+      "businessRegNo": "GSTIN07AAACA1234F1Z5",
+      "establishmentAddress": "Plot 42, Okhla Industrial Area Phase III, New Delhi - 110020",
+      "issueDate": "2026-01-15",
+      "expiryDate": "2027-01-14",
+      "status": "VALID",
+      "stampingSealNumber": "LM-DL-2026-8812",
+      "verificationStandard": "Legal Metrology (General) Rules, 2011 - Seventh Schedule",
+      "issuingOfficer": "Insp. Rajesh Sharma",
+      "issuingOfficerId": "LMO-01",
+      "issuingOffice": "Office of the Assistant Controller of Legal Metrology, South Delhi Zone",
+      "testResultsSummary": "Maximum Permissible Error (MPE) ±5g. Tested at 5kg, 15kg, 30kg: Observed Error +0.2g (Within permissible legal tolerance). Holographic tamper-evident seal intact.",
+      "testDetails": [
+        {
+          "testPoint": "Zero Load Check",
+          "appliedLoad": "0.000 kg",
+          "observedError": "0.00 g",
+          "mpeAllowed": "±2.5 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "1/3 Max Capacity",
+          "appliedLoad": "10.000 kg",
+          "observedError": "+0.10 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "2/3 Max Capacity",
+          "appliedLoad": "20.000 kg",
+          "observedError": "+0.20 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "Full Max Capacity",
+          "appliedLoad": "30.000 kg",
+          "observedError": "+0.20 g",
+          "mpeAllowed": "±7.5 g",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "Eccentric Corner Test",
+          "appliedLoad": "10.000 kg",
+          "observedError": "+0.15 g",
+          "mpeAllowed": "±5.0 g",
+          "status": "PASS"
+        }
+      ],
+      "digitalHash": "SHA256:7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069",
+      "qrVerificationUrl": "http://localhost:5173/certificate/CERT-2026-001",
+      "revocationReason": null,
+      "revokedAt": null
+    },
+    {
+      "id": "CERT-2025-912",
+      "certificateNumber": "IND-LM-2025-DL-51209",
+      "instrumentId": "INST-2026-003",
+      "instrumentType": "Multi-Product Fuel Dispenser (MPD)",
+      "manufacturer": "Tokheim India Corp",
+      "model": "Quantium 510 MPD 4-Hose",
+      "serialNumber": "TK-2023-1109",
+      "accuracyClass": "Class 0.5 (Liquid Fuel Standards)",
+      "capacity": "Max: 80 L/min | Min: 2 L/min | e: 0.01 L",
+      "ownerName": "Apex Weighing & Logistics Ltd",
+      "businessRegNo": "GSTIN07AAACA1234F1Z5",
+      "establishmentAddress": "Ring Road Commercial Fuel Station, AIIMS South, New Delhi - 110029",
+      "issueDate": "2025-09-06",
+      "expiryDate": "2026-09-05",
+      "status": "REVOKED",
+      "stampingSealNumber": "LM-DL-2025-5120",
+      "verificationStandard": "Legal Metrology Act, 2009 & Petroleum Dispensing Regulations",
+      "issuingOfficer": "Insp. Rajesh Sharma",
+      "issuingOfficerId": "LMO-01",
+      "issuingOffice": "Legal Metrology Department, South Delhi Zone, New Delhi",
+      "testResultsSummary": "Standard 5L & 20L check measures passed. Pulser calibration matched to 0.05% error limit. Tamper-evident holographic tape applied.",
+      "testDetails": [
+        {
+          "testPoint": "5 Litre Standard Measure",
+          "appliedLoad": "5.000 L",
+          "observedError": "+0.002 L",
+          "mpeAllowed": "±0.025 L",
+          "status": "PASS"
+        },
+        {
+          "testPoint": "20 Litre High Flow Measure",
+          "appliedLoad": "20.000 L",
+          "observedError": "+0.008 L",
+          "mpeAllowed": "±0.100 L",
+          "status": "PASS"
+        }
+      ],
+      "digitalHash": "SHA256:4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b",
+      "qrVerificationUrl": "http://localhost:5173/certificate/CERT-2025-912",
+      "revocationReason": "Reported broken physical seal and unauthorized tampering under Section 30 of Legal Metrology Act, 2009.",
+      "revokedAt": "2026-09-05"
+    },
+    {
+      "id": "CERT-2024-042",
+      "certificateNumber": "IND-LM-2024-DL-11024",
+      "instrumentId": "INST-2026-004",
+      "instrumentType": "Automatic Gravimetric Filling Machine",
+      "manufacturer": "Nichrome Packaging Solutions",
+      "model": "Excel 400 Gravimetric Packer",
+      "serialNumber": "NC-2023-0042",
+      "accuracyClass": "Class II (High Accuracy)",
+      "capacity": "Max: 5 kg | Min: 250 g | e: 1 g",
+      "ownerName": "Apex Weighing & Logistics Ltd",
+      "businessRegNo": "GSTIN07AAACA1234F1Z5",
+      "establishmentAddress": "Warehouse #7, Badarpur Border, New Delhi - 110044",
+      "issueDate": "2024-11-21",
+      "expiryDate": "2025-11-20",
+      "status": "EXPIRED",
+      "stampingSealNumber": "LM-DL-2024-1102",
+      "verificationStandard": "Legal Metrology (General) Rules, 2011 - Schedule VIII",
+      "issuingOfficer": "Insp. Rajesh Sharma",
+      "issuingOfficerId": "LMO-01",
+      "issuingOffice": "Legal Metrology Department, South Delhi Zone",
+      "testResultsSummary": "Stamping validity expired on 2025-11-20. Requires immediate re-verification before commercial operation.",
+      "testDetails": [],
+      "digitalHash": "SHA256:9988aabbccddeeff00112233445566778899aabbccddeeff0011223344556677",
+      "qrVerificationUrl": "http://localhost:5173/certificate/CERT-2024-042",
+      "revocationReason": null,
+      "revokedAt": null
+    },
+    {
+      "id": "CERT-2025-331",
+      "certificateNumber": "IND-LM-2025-MH-33190",
+      "instrumentId": "INST-2026-006",
+      "instrumentType": "Mechanical Bulk Grain Hopper Scale",
+      "manufacturer": "Essae-Teraoka Ltd",
+      "model": "DS-215 Grain Hopper 10T",
+      "serialNumber": "ES-2024-3319",
+      "accuracyClass": "Class III (Medium Accuracy)",
+      "capacity": "Max: 10 Tonnes | Min: 50 kg | e: 2 kg",
+      "ownerName": "Bharat Agro Grain Terminals",
+      "businessRegNo": "GSTIN27AAACB7788P1Z1",
+      "establishmentAddress": "Silo Yard 4, APMC Market Yard, Navi Mumbai - 400705",
+      "issueDate": "2025-03-20",
+      "expiryDate": "2026-03-19",
+      "status": "VALID",
+      "stampingSealNumber": "LM-MH-2025-3319",
+      "verificationStandard": "Legal Metrology (General) Rules, 2011",
+      "issuingOfficer": "Insp. Ananya Deshmukh",
+      "issuingOfficerId": "LMO-02",
+      "issuingOffice": "Legal Metrology Division, Thane District, Maharashtra",
+      "testResultsSummary": "Standard 2 Tonne mass blocks combined with lever check. Maximum error within ±2.0 kg.",
+      "testDetails": [],
+      "digitalHash": "SHA256:11223344556677889900aabbccddeeff11223344556677889900aabbccddeeff",
+      "qrVerificationUrl": "http://localhost:5173/certificate/CERT-2025-331",
+      "revocationReason": null,
+      "revokedAt": null
+    }
+  ],
+  "gatcReports": [
+    {
+      "id": "GATC-REP-2026-03",
+      "labCode": "GATC-DL-001",
+      "labName": "National Metrology Standards Lab - GATC North",
+      "instrumentModel": "Sartorius Secura 225D-1S Micro-Balance",
+      "manufacturer": "Sartorius India",
+      "serialNumber": "SR-2025-7890",
+      "accuracyClass": "Class I (Special Precision)",
+      "testDate": "2026-09-07",
+      "standardWeightsUsed": "E1 & E2 Standard Class Weights (NPL India Traceable)",
+      "temperature": "20.2 °C",
+      "humidity": "48.5 % RH",
+      "linearityError": "0.04 mg (Allowed: 0.10 mg)",
+      "repeatabilityStdDev": "0.02 mg",
+      "result": "PASSED_CALIBRATION",
+      "officerRemarks": "Instrument complies with OIML R76 Class I specifications. Recommended for statutory stamping by Legal Metrology Department.",
+      "certificateUrl": "#",
+      "technician": "Dr. V. K. Ramanathan, Principal Metrologist"
+    },
+    {
+      "id": "GATC-REP-2026-02",
+      "labCode": "GATC-DL-001",
+      "labName": "National Metrology Standards Lab - GATC North",
+      "instrumentModel": "Sartorius Secura 225D-1S Micro-Balance",
+      "manufacturer": "Sartorius India",
+      "serialNumber": "SR-2025-7890",
+      "accuracyClass": "Class II (High Accuracy)",
+      "testDate": "2026-09-05",
+      "standardWeightsUsed": "E1 & E2 Standard Class Weights (NPL India Traceable)",
+      "temperature": "20.2 °C",
+      "humidity": "48.5 % RH",
+      "linearityError": "0.04 mg (Allowed: 0.10 mg)",
+      "repeatabilityStdDev": "0.02 mg",
+      "result": "PASSED_CALIBRATION",
+      "officerRemarks": "Instrument complies with OIML R76 Class I specifications. Recommended for statutory stamping by Legal Metrology Department.",
+      "certificateUrl": "#",
+      "technician": "Dr. V. K. Ramanathan, Principal Metrologist"
+    },
+    {
+      "id": "GATC-REP-2026-01",
+      "labCode": "GATC-DL-001",
+      "labName": "National Metrology Standards Lab - GATC North",
+      "instrumentModel": "Sartorius Secura 225D-1S Micro-Balance",
+      "manufacturer": "Sartorius India",
+      "serialNumber": "SR-2025-7890",
+      "accuracyClass": "Class I (Special Precision)",
+      "testDate": "2026-08-14",
+      "standardWeightsUsed": "E1 & E2 Standard Class Weights (NPL Traceable)",
+      "temperature": "20.2 °C",
+      "humidity": "48 % RH",
+      "linearityError": "0.04 mg (Allowed: 0.10 mg)",
+      "repeatabilityStdDev": "0.02 mg",
+      "result": "PASSED_CALIBRATION",
+      "officerRemarks": "Instrument complies with OIML R76 Class I specifications. Recommended for legal stamping.",
+      "certificateUrl": "#",
+      "technician": "Dr. V. K. Ramanathan, Principal Metrologist"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "NOTIF-1788624326099-pass",
+      "userId": "USR-BIZ-01",
+      "title": "Verification Certificate Issued! 📜",
+      "message": "Your instrument Automatic Gravimetric Filling Machine passed verification. Certificate: IND-LM-2026-DL-89251. Valid till 2027-09-05.",
+      "type": "success",
+      "timestamp": "2026-09-05 09:35 pm",
+      "read": false,
+      "link": "/certificate/CERT-2026-011"
+    },
+    {
+      "id": "NOTIF-1788624306418",
+      "userId": "USR-ADM-01",
+      "title": "New Verification Application",
+      "message": "Application APP-2026-107 submitted for Automatic Gravimetric Filling Machine (Excel 400 Gravimetric Packer). Needs admin review & scheduling.",
+      "type": "info",
+      "timestamp": "2026-09-05 09:35 pm",
+      "read": false,
+      "link": "/admin/applications"
+    },
+    {
+      "id": "NOTIF-1788624215646-pass",
+      "userId": "USR-BIZ-01",
+      "title": "Verification Certificate Issued! 📜",
+      "message": "Your instrument Multi-Product Fuel Dispenser (MPD) passed verification. Certificate: IND-LM-2026-DL-85117. Valid till 2027-09-05.",
+      "type": "success",
+      "timestamp": "2026-09-05 09:33 pm",
+      "read": false,
+      "link": "/certificate/CERT-2026-010"
+    },
+    {
+      "id": "NOTIF-1788623746489-pass",
+      "userId": "USR-BIZ-01",
+      "title": "Verification Certificate Issued! 📜",
+      "message": "Your instrument Heavy Duty Electronic Weighbridge passed verification. Certificate: IND-LM-2026-DL-21308. Valid till 2027-09-05.",
+      "type": "success",
+      "timestamp": "2026-09-05 09:25 pm",
+      "read": false,
+      "link": "/certificate/CERT-2026-009"
+    },
+    {
+      "id": "NOTIF-1788623735844-pass",
+      "userId": "USR-BIZ-01",
+      "title": "Verification Certificate Issued! 📜",
+      "message": "Your instrument Electronic Retail Weighing Scale passed verification. Certificate: IND-LM-2026-DL-89180. Valid till 2027-09-05.",
+      "type": "success",
+      "timestamp": "2026-09-05 09:25 pm",
+      "read": false,
+      "link": "/certificate/CERT-2026-008"
+    },
+    {
+      "id": "NOTIF-1788623727085-pass",
+      "userId": "USR-BIZ-01",
+      "title": "Verification Certificate Issued! 📜",
+      "message": "Your instrument Multi-Product Fuel Dispenser (MPD) passed verification. Certificate: IND-LM-2026-DL-38315. Valid till 2027-09-05.",
+      "type": "success",
+      "timestamp": "2026-09-05 09:25 pm",
+      "read": false,
+      "link": "/certificate/CERT-2026-007"
+    },
+    {
+      "id": "NOTIF-1788623716130-pass",
+      "userId": "USR-BIZ-02",
+      "title": "Verification Certificate Issued! 📜",
+      "message": "Your instrument High-Precision Micro-Analytical Balance passed verification. Certificate: IND-LM-2026-TN-51830. Valid till 2027-09-05.",
+      "type": "success",
+      "timestamp": "2026-09-05 09:25 pm",
+      "read": false,
+      "link": "/certificate/CERT-2026-006"
+    },
+    {
+      "id": "NOTIF-1788623698055-pass",
+      "userId": "USR-BIZ-01",
+      "title": "Verification Certificate Issued! 📜",
+      "message": "Your instrument Electronic Retail Weighing Scale passed verification. Certificate: IND-LM-2026-DL-41259. Valid till 2027-09-05.",
+      "type": "success",
+      "timestamp": "2026-09-05 09:24 pm",
+      "read": false,
+      "link": "/certificate/CERT-2026-005"
+    },
+    {
+      "id": "NOTIF-1788623573944-2",
+      "userId": "USR-BIZ-01",
+      "title": "Verification Visit Scheduled",
+      "message": "Your application APP-2026-106 has been scheduled for inspection on 2026-09-14 with Insp. Ananya Deshmukh.",
+      "type": "success",
+      "timestamp": "2026-09-05 09:22 pm",
+      "read": false,
+      "link": "/business/applications"
+    },
+    {
+      "id": "NOTIF-1788623573944-1",
+      "userId": "LMO-02",
+      "title": "New Field Verification Assigned",
+      "message": "You are scheduled to verify Multi-Product Fuel Dispenser (MPD) (Quantium 510 MPD 4-Hose) on 2026-09-14 (10:30 AM - 01:00 PM).",
+      "type": "primary",
+      "timestamp": "2026-09-05 09:22 pm",
+      "read": false,
+      "link": "/lmo/inspect/APP-2026-106"
+    },
+    {
+      "id": "NOTIF-1788623569940-2",
+      "userId": "USR-BIZ-01",
+      "title": "Verification Visit Scheduled",
+      "message": "Your application APP-2026-106 has been scheduled for inspection on 2026-09-14 with Insp. Ananya Deshmukh.",
+      "type": "success",
+      "timestamp": "2026-09-05 09:22 pm",
+      "read": false,
+      "link": "/business/applications"
+    },
+    {
+      "id": "NOTIF-1788623569940-1",
+      "userId": "LMO-02",
+      "title": "New Field Verification Assigned",
+      "message": "You are scheduled to verify Multi-Product Fuel Dispenser (MPD) (Quantium 510 MPD 4-Hose) on 2026-09-14 (10:30 AM - 01:00 PM).",
+      "type": "primary",
+      "timestamp": "2026-09-05 09:22 pm",
+      "read": false,
+      "link": "/lmo/inspect/APP-2026-106"
+    },
+    {
+      "id": "NOTIF-1788623565440-2",
+      "userId": "USR-BIZ-01",
+      "title": "Verification Visit Scheduled",
+      "message": "Your application APP-2026-106 has been scheduled for inspection on 2026-09-14 with Insp. Ananya Deshmukh.",
+      "type": "success",
+      "timestamp": "2026-09-05 09:22 pm",
+      "read": false,
+      "link": "/business/applications"
+    },
+    {
+      "id": "NOTIF-1788623565440-1",
+      "userId": "LMO-02",
+      "title": "New Field Verification Assigned",
+      "message": "You are scheduled to verify Multi-Product Fuel Dispenser (MPD) (Quantium 510 MPD 4-Hose) on 2026-09-14 (10:30 AM - 01:00 PM).",
+      "type": "primary",
+      "timestamp": "2026-09-05 09:22 pm",
+      "read": false,
+      "link": "/lmo/inspect/APP-2026-106"
+    },
+    {
+      "id": "NOTIF-1788623536308",
+      "userId": "USR-ADM-01",
+      "title": "New Verification Application",
+      "message": "Application APP-2026-106 submitted for Multi-Product Fuel Dispenser (MPD) (Quantium 510 MPD 4-Hose). Needs admin review & scheduling.",
+      "type": "info",
+      "timestamp": "2026-09-05 09:22 pm",
+      "read": false,
+      "link": "/admin/applications"
+    },
+    {
+      "id": "NOTIF-1788623280651-2",
+      "userId": "USR-BIZ-01",
+      "title": "Verification Visit Scheduled",
+      "message": "Your application APP-2026-105 has been scheduled for inspection on 2026-09-27 with Insp. Rajesh Sharma.",
+      "type": "success",
+      "timestamp": "2026-09-05 09:18 pm",
+      "read": false,
+      "link": "/business/applications"
+    },
+    {
+      "id": "NOTIF-1788623280651-1",
+      "userId": "LMO-01",
+      "title": "New Field Verification Assigned",
+      "message": "You are scheduled to verify Electronic Retail Weighing Scale (EL-900 Plus Dual Display) on 2026-09-27 (10:30 AM - 01:00 PM).",
+      "type": "primary",
+      "timestamp": "2026-09-05 09:18 pm",
+      "read": false,
+      "link": "/lmo/inspect/APP-2026-105"
+    },
+    {
+      "id": "NOTIF-1788623122520-2",
+      "userId": "USR-BIZ-01",
+      "title": "Verification Visit Scheduled",
+      "message": "Your application APP-2026-101 has been scheduled for inspection on 2026-08-27 with National Metrology Standards Lab - GATC North.",
+      "type": "success",
+      "timestamp": "2026-09-05 09:15 pm",
+      "read": false,
+      "link": "/business/applications"
+    },
+    {
+      "id": "NOTIF-1788623122520-1",
+      "userId": "GATC-01",
+      "title": "New Field Verification Assigned",
+      "message": "You are scheduled to verify Heavy Duty Electronic Weighbridge 60T (Apex Logistics CFS) on 2026-08-27 (04:30 PM - 06:30 PM).",
+      "type": "primary",
+      "timestamp": "2026-09-05 09:15 pm",
+      "read": false,
+      "link": "/lmo/inspect/APP-2026-101"
+    },
+    {
+      "id": "NOTIF-1788623096446-2",
+      "userId": "USR-BIZ-01",
+      "title": "Verification Visit Scheduled",
+      "message": "Your application APP-2026-105 has been scheduled for inspection on 2026-08-27 with Insp. K. Venkatesh.",
+      "type": "success",
+      "timestamp": "2026-09-05 09:14 pm",
+      "read": false,
+      "link": "/business/applications"
+    },
+    {
+      "id": "NOTIF-1788623096446-1",
+      "userId": "LMO-03",
+      "title": "New Field Verification Assigned",
+      "message": "You are scheduled to verify Electronic Retail Weighing Scale (EL-900 Plus Dual Display) on 2026-08-27 (10:30 AM - 01:00 PM).",
+      "type": "primary",
+      "timestamp": "2026-09-05 09:14 pm",
+      "read": false,
+      "link": "/lmo/inspect/APP-2026-105"
+    },
+    {
+      "id": "NOTIF-1788621965957",
+      "userId": "USR-ADM-01",
+      "title": "New Verification Application",
+      "message": "Application APP-2026-105 submitted for Electronic Retail Weighing Scale (EL-900 Plus Dual Display). Needs admin review & scheduling.",
+      "type": "info",
+      "timestamp": "2026-09-05 08:56 PM",
+      "read": false,
+      "link": "/admin/applications"
+    },
+    {
+      "id": "NOTIF-01",
+      "userId": "USR-BIZ-01",
+      "title": "Stamping Expiry Alert",
+      "message": "Fuel Dispenser (SN: TK-2023-1109) stamping expires in 12 days on 2026-09-05.",
+      "type": "warning",
+      "timestamp": "2026-08-24 09:00 AM",
+      "read": false,
+      "link": "/business/instruments/INST-2026-003"
+    },
+    {
+      "id": "NOTIF-02",
+      "userId": "USR-BIZ-01",
+      "title": "Inspection Scheduled",
+      "message": "Inspection for Retail Scale EL-900 (APP-2026-103) scheduled with Insp. Rajesh Sharma on 2026-08-25.",
+      "type": "info",
+      "timestamp": "2026-08-22 03:30 PM",
+      "read": true,
+      "link": "/business/applications"
+    },
+    {
+      "id": "NOTIF-03",
+      "userId": "LMO-01",
+      "title": "New Inspection Task Assigned",
+      "message": "You have been assigned on-site verification for APP-2026-103 at Okhla Phase III Retail Hub.",
+      "type": "primary",
+      "timestamp": "2026-08-22 03:30 PM",
+      "read": false,
+      "link": "/lmo/inspect/APP-2026-103"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "LOG-2026-7104",
+      "timestamp": "9/7/2026, 1:21:10 PM IST",
+      "actor": "National Metrology Standards Lab - GATC North",
+      "action": "GATC_LAB_CALIBRATION_ISSUED",
+      "details": "GATC Calibration Report GATC-REP-2026-03 generated for Sartorius Secura 225D-1S Micro-Balance (SR-2025-7890)",
+      "hash": "SHA256:53ea95d45eaf..."
+    },
+    {
+      "id": "LOG-2026-9814",
+      "timestamp": "5/9/2026, 9:35:26 pm IST",
+      "actor": "Insp. Rajesh Sharma",
+      "action": "FIELD_VERIFY_PASSED_CERTIFICATE_ISSUED",
+      "details": "Field audit PASSED for INST-2026-004. Stamping Seal: LM-DL-2026-9827, Certificate: IND-LM-2026-DL-89251",
+      "hash": "SHA256:947cd284195c..."
+    },
+    {
+      "id": "LOG-2026-6954",
+      "timestamp": "5/9/2026, 9:35:06 pm IST",
+      "actor": "Apex Weighing & Logistics Ltd",
+      "action": "SUBMIT_VERIFICATION_APPLICATION",
+      "details": "Submitted application APP-2026-107 for instrument INST-2026-004. Fee: ₹ 2,000",
+      "hash": "SHA256:b316be9c3b57..."
+    },
+    {
+      "id": "LOG-2026-1993",
+      "timestamp": "5/9/2026, 9:33:35 pm IST",
+      "actor": "Insp. Rajesh Sharma",
+      "action": "FIELD_VERIFY_PASSED_CERTIFICATE_ISSUED",
+      "details": "Field audit PASSED for INST-2026-003. Stamping Seal: LM-DL-2026-5411, Certificate: IND-LM-2026-DL-85117",
+      "hash": "SHA256:233f4bd2844e..."
+    },
+    {
+      "id": "LOG-2026-2344",
+      "timestamp": "5/9/2026, 9:25:46 pm IST",
+      "actor": "Insp. Rajesh Sharma",
+      "action": "FIELD_VERIFY_PASSED_CERTIFICATE_ISSUED",
+      "details": "Field audit PASSED for INST-2026-002. Stamping Seal: LM-DL-2026-6666, Certificate: IND-LM-2026-DL-21308",
+      "hash": "SHA256:cbca88807cbb..."
+    },
+    {
+      "id": "LOG-2026-2204",
+      "timestamp": "5/9/2026, 9:25:35 pm IST",
+      "actor": "Insp. Rajesh Sharma",
+      "action": "FIELD_VERIFY_PASSED_CERTIFICATE_ISSUED",
+      "details": "Field audit PASSED for INST-2026-001. Stamping Seal: LM-DL-2026-6751, Certificate: IND-LM-2026-DL-89180",
+      "hash": "SHA256:0c3d9d9b1a9a..."
+    },
+    {
+      "id": "LOG-2026-4653",
+      "timestamp": "5/9/2026, 9:25:27 pm IST",
+      "actor": "Insp. Rajesh Sharma",
+      "action": "FIELD_VERIFY_PASSED_CERTIFICATE_ISSUED",
+      "details": "Field audit PASSED for INST-2026-003. Stamping Seal: LM-DL-2026-2456, Certificate: IND-LM-2026-DL-38315",
+      "hash": "SHA256:26cf4eecbd00..."
+    },
+    {
+      "id": "LOG-2026-2956",
+      "timestamp": "5/9/2026, 9:25:16 pm IST",
+      "actor": "Insp. Rajesh Sharma",
+      "action": "FIELD_VERIFY_PASSED_CERTIFICATE_ISSUED",
+      "details": "Field audit PASSED for INST-2026-005. Stamping Seal: LM-TN-2026-2793, Certificate: IND-LM-2026-TN-51830",
+      "hash": "SHA256:5237abd4b4a8..."
+    },
+    {
+      "id": "LOG-2026-6025",
+      "timestamp": "5/9/2026, 9:24:58 pm IST",
+      "actor": "Insp. Rajesh Sharma",
+      "action": "FIELD_VERIFY_PASSED_CERTIFICATE_ISSUED",
+      "details": "Field audit PASSED for INST-2026-001. Stamping Seal: LM-DL-2026-1401, Certificate: IND-LM-2026-DL-41259",
+      "hash": "SHA256:db2ac4da1025..."
+    },
+    {
+      "id": "LOG-2026-7600",
+      "timestamp": "5/9/2026, 9:24:18 pm IST",
+      "actor": "National Metrology Standards Lab - GATC North",
+      "action": "GATC_LAB_CALIBRATION_ISSUED",
+      "details": "GATC Calibration Report GATC-REP-2026-02 generated for Sartorius Secura 225D-1S Micro-Balance (SR-2025-7890)",
+      "hash": "SHA256:ecda81ca9654..."
+    },
+    {
+      "id": "LOG-2026-7726",
+      "timestamp": "5/9/2026, 9:22:53 pm IST",
+      "actor": "Legal Metrology Controller (Admin)",
+      "action": "ASSIGN_AND_SCHEDULE_LMO",
+      "details": "Application APP-2026-106 assigned to Insp. Ananya Deshmukh (LMO-02) for date 2026-09-14",
+      "hash": "SHA256:1fb21acc6dec..."
+    },
+    {
+      "id": "LOG-2026-2848",
+      "timestamp": "5/9/2026, 9:22:49 pm IST",
+      "actor": "Legal Metrology Controller (Admin)",
+      "action": "ASSIGN_AND_SCHEDULE_LMO",
+      "details": "Application APP-2026-106 assigned to Insp. Ananya Deshmukh (LMO-02) for date 2026-09-14",
+      "hash": "SHA256:30e726bdbcc2..."
+    },
+    {
+      "id": "LOG-2026-7581",
+      "timestamp": "5/9/2026, 9:22:45 pm IST",
+      "actor": "Legal Metrology Controller (Admin)",
+      "action": "ASSIGN_AND_SCHEDULE_LMO",
+      "details": "Application APP-2026-106 assigned to Insp. Ananya Deshmukh (LMO-02) for date 2026-09-14",
+      "hash": "SHA256:ebf5af163a7b..."
+    },
+    {
+      "id": "LOG-2026-9265",
+      "timestamp": "5/9/2026, 9:22:16 pm IST",
+      "actor": "Apex Weighing & Logistics Ltd",
+      "action": "SUBMIT_VERIFICATION_APPLICATION",
+      "details": "Submitted application APP-2026-106 for instrument INST-2026-003. Fee: ₹ 2,500",
+      "hash": "SHA256:836851e38db5..."
+    },
+    {
+      "id": "LOG-2026-3054",
+      "timestamp": "5/9/2026, 9:18:00 pm IST",
+      "actor": "Legal Metrology Controller (Admin)",
+      "action": "ASSIGN_AND_SCHEDULE_LMO",
+      "details": "Application APP-2026-105 assigned to Insp. Rajesh Sharma (LMO-01) for date 2026-09-27",
+      "hash": "SHA256:efc43ae1d6ed..."
+    },
+    {
+      "id": "LOG-2026-8313",
+      "timestamp": "5/9/2026, 9:17:10 pm IST",
+      "actor": "Legal Metrology Controller (Admin)",
+      "action": "REVOKE_CERTIFICATE",
+      "details": "Certificate IND-LM-2025-DL-51209 REVOKED. Grounds: Reported broken physical seal and unauthorized tampering under Section 30 of Legal Metrology Act, 2009.",
+      "hash": "SHA256:4b13f50f44da..."
+    },
+    {
+      "id": "LOG-2026-7780",
+      "timestamp": "5/9/2026, 9:15:22 pm IST",
+      "actor": "Legal Metrology Controller (Admin)",
+      "action": "ASSIGN_AND_SCHEDULE_LMO",
+      "details": "Application APP-2026-101 assigned to National Metrology Standards Lab - GATC North (GATC-01) for date 2026-08-27",
+      "hash": "SHA256:004c8c40420e..."
+    },
+    {
+      "id": "LOG-2026-9087",
+      "timestamp": "5/9/2026, 9:14:56 pm IST",
+      "actor": "Legal Metrology Controller (Admin)",
+      "action": "ASSIGN_AND_SCHEDULE_LMO",
+      "details": "Application APP-2026-105 assigned to Insp. K. Venkatesh (LMO-03) for date 2026-08-27",
+      "hash": "SHA256:dc206732c0ff..."
+    },
+    {
+      "id": "LOG-2026-3039",
+      "timestamp": "9/5/2026, 8:56:05 PM IST",
+      "actor": "Apex Weighing & Logistics Ltd",
+      "action": "SUBMIT_VERIFICATION_APPLICATION",
+      "details": "Submitted application APP-2026-105 for instrument INST-2026-001. Fee: ₹ 2,000",
+      "hash": "SHA256:f54cdf1f305f..."
+    },
+    {
+      "id": "LOG-2026-8801",
+      "timestamp": "2026-08-24 10:15:02 IST",
+      "actor": "Public Citizen (IP 103.21.244.18)",
+      "action": "PUBLIC_QR_VERIFY",
+      "details": "Scanned QR Code for Certificate CERT-2026-001 (Avery EL-900 Plus, Apex Logistics). Status: VALID",
+      "hash": "SHA256:d8a21f7b9c3e..."
+    },
+    {
+      "id": "LOG-2026-8799",
+      "timestamp": "2026-08-22 15:30:11 IST",
+      "actor": "Admin (Dr. Anand Swaroop, IAS)",
+      "action": "ASSIGN_AND_SCHEDULE_LMO",
+      "details": "Assigned Inspection APP-2026-103 to Insp. Rajesh Sharma for 2026-08-25 02:30 PM slot.",
+      "hash": "SHA256:a1b2c3d4e5f6..."
+    },
+    {
+      "id": "LOG-2026-8795",
+      "timestamp": "2026-08-22 09:15:44 IST",
+      "actor": "Trader (Rajesh Agrawal, Apex Logistics)",
+      "action": "SUBMIT_VERIFICATION_APPLICATION",
+      "details": "Submitted verification application APP-2026-103 for Retail Scale EL-900. Fee ₹800 paid online.",
+      "hash": "SHA256:9f8e7d6c5b4a..."
+    },
+    {
+      "id": "LOG-2026-8780",
+      "timestamp": "2026-08-18 10:30:19 IST",
+      "actor": "Trader (Rajesh Agrawal, Apex Logistics)",
+      "action": "SUBMIT_VERIFICATION_APPLICATION",
+      "details": "Submitted initial verification application APP-2026-101 for 60T Weighbridge. Fee ₹4,500 paid.",
+      "hash": "SHA256:554433221100..."
+    },
+    {
+      "id": "LOG-2026-8742",
+      "timestamp": "2026-01-15 16:30:00 IST",
+      "actor": "LMO (Insp. Rajesh Sharma, DOCA-LM-1092)",
+      "action": "FIELD_VERIFY_PASSED_CERTIFICATE_ISSUED",
+      "details": "Conducted field verification on INST-2026-001. All weight tests passed within MPE. Applied Stamping Seal LM-DL-2026-8812 and issued CERT-2026-001.",
+      "hash": "SHA256:7f83b1657ff1..."
+    }
+  ]
+}

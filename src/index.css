@@ -1,0 +1,324 @@
+/* Trust Scale — National Online Verification & Stamping Portal */
+/* Directorate of Legal Metrology, Department of Consumer Affairs, Govt of India */
+
+:root {
+  --navy-dark: #07192f;
+  --navy-primary: #0b2545;
+  --navy-secondary: #134074;
+  --navy-accent: #0077b6;
+  --gov-saffron: #f97316;
+  --gov-saffron-dark: #c2410c;
+  --gov-green: #15803d;
+  --gov-green-light: #22c55e;
+  --gov-gold: #eab308;
+  --gov-bg: #f8fafc;
+  --gov-border: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--gov-bg);
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Navy Backgrounds & Text */
+.bg-navy {
+  background-color: var(--navy-primary) !important;
+}
+
+.bg-navy-dark {
+  background-color: var(--navy-dark) !important;
+}
+
+.text-navy-dark {
+  color: var(--navy-dark) !important;
+}
+
+/* Tricolor Banner */
+.gov-tricolor-bar {
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    #ff9933 0%,
+    #ff9933 33.33%,
+    #ffffff 33.33%,
+    #ffffff 66.66%,
+    #138808 66.66%,
+    #138808 100%
+  );
+  width: 100%;
+}
+
+/* Top Utility Bar */
+.gov-top-bar {
+  background-color: #071526;
+  color: #cbd5e1;
+  font-size: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gov-main-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.portal-brand-title {
+  font-size: 1.35rem;
+  letter-spacing: -0.3px;
+}
+
+.portal-brand-subtitle {
+  font-size: 0.76rem;
+  line-height: 1.2;
+}
+
+/* Subnav */
+.gov-subnav {
+  background-color: #0b2545;
+}
+
+.gov-subnav .nav-link {
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-weight: 500;
+  font-size: 0.88rem;
+  padding: 0.6rem 0.85rem !important;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.gov-subnav .nav-link:hover,
+.gov-subnav .nav-link.active {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+}
+
+/* Footer */
+.gov-footer-wrapper {
+  background-color: var(--navy-dark);
+}
+
+.gov-footer-top {
+  background: linear-gradient(180deg, var(--navy-primary) 0%, var(--navy-dark) 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gov-footer-wrapper .text-light,
+.gov-footer-wrapper .text-light-50,
+.gov-footer-wrapper .text-white-50 {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+.gov-footer-wrapper a.text-light:hover {
+  color: #ffffff !important;
+}
+
+.gov-footer-help-card {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+/* Portal Workflow Tour Bar */
+.portal-walkthrough-bar-wrapper {
+  background-color: #07192f;
+  z-index: 1050;
+  position: sticky;
+  top: 0;
+}
+
+/* QR Code Scanner Laser Animation */
+.qr-scanner-viewfinder {
+  width: 260px;
+  height: 260px;
+  border: 2px dashed #f97316;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #0f172a;
+}
+
+.qr-scanner-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.qr-scanner-laser {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #22c55e, #eab308, transparent);
+  box-shadow: 0 0 10px #22c55e;
+  animation: laserScan 2.2s infinite ease-in-out;
+}
+
+@keyframes laserScan {
+  0% {
+    top: 0%;
+  }
+  50% {
+    top: 98%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+.viewfinder-corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: #f97316;
+  border-style: solid;
+}
+.viewfinder-corner.top-left {
+  top: 8px;
+  left: 8px;
+  border-width: 3px 0 0 3px;
+}
+.viewfinder-corner.top-right {
+  top: 8px;
+  right: 8px;
+  border-width: 3px 3px 0 0;
+}
+.viewfinder-corner.bottom-left {
+  bottom: 8px;
+  left: 8px;
+  border-width: 0 0 3px 3px;
+}
+.viewfinder-corner.bottom-right {
+  bottom: 8px;
+  right: 8px;
+  border-width: 0 3px 3px 0;
+}
+
+/* Certificate Styles & Watermark */
+.printable-certificate {
+  border: 6px double #0b2545 !important;
+  background-image: radial-gradient(circle, rgba(11, 37, 69, 0.025) 10%, transparent 10%);
+  background-size: 16px 16px;
+}
+
+.cert-watermark-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-32deg);
+  pointer-events: none;
+  z-index: 1;
+  user-select: none;
+  opacity: 0.04;
+}
+
+.cert-watermark-text {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #0b2545;
+  white-space: nowrap;
+  letter-spacing: 4px;
+}
+
+/* Lifecycle Stepper Track */
+.lifecycle-stepper-track {
+  position: relative;
+}
+
+.lifecycle-line {
+  position: absolute;
+  top: 19px;
+  left: 5%;
+  right: 5%;
+  height: 3px;
+  background-color: #cbd5e1;
+  z-index: 1;
+}
+
+.ring-pulse {
+  animation: pulseRing 1.8s infinite;
+}
+
+@keyframes pulseRing {
+  0% {
+    box-shadow: 0 0 0 0 rgba(11, 37, 69, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(11, 37, 69, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(11, 37, 69, 0);
+  }
+}
+
+/* Interactive Hover Utilities */
+.hover-shadow:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+}
+
+.hover-translate:hover {
+  transform: translateY(-3px);
+}
+
+.transition-all {
+  transition: all 0.2s ease-in-out;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Timeline */
+.timeline-dot {
+  position: absolute;
+  left: -20px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--navy-primary);
+  border: 2px solid #ffffff;
+}
+
+/* Sticker sheet styling */
+.sticker-badge-box {
+  background: linear-gradient(135deg, #ffffff 0%, #fffbeb 100%);
+}
+
+/* Print Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .printable-certificate,
+  .printable-certificate *,
+  .printable-stickers,
+  .printable-stickers * {
+    visibility: visible;
+  }
+  .printable-certificate {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    border: 4px double #000 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+  }
+  .printable-stickers {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
