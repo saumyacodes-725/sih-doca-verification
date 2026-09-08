@@ -184,6 +184,4 @@ The backend stores demo data in `backend/db.json`, seeded from `src/data/mockDat
 | **GATC** | Government Approved Test Centre — conducts lab tests and submits reports |
 | **Public** | Verifies certificates via QR code or certificate lookup, no login required |
 
-## License
 
-No license specified yet — add one (e.g. MIT) if you intend to open-source this project.
