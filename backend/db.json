@@ -1304,6 +1304,25 @@
   ],
   "gatcReports": [
     {
+      "id": "GATC-REP-2026-04",
+      "labCode": "GATC-DL-001",
+      "labName": "National Metrology Standards Lab - GATC North",
+      "instrumentModel": "Sartorius Secura 225D-1S Micro-Balance",
+      "manufacturer": "Sartorius India",
+      "serialNumber": "SR-2025-7890",
+      "accuracyClass": "Class I (Special Precision)",
+      "testDate": "2026-09-08",
+      "standardWeightsUsed": "E1 & E2 Standard Class Weights (NPL India Traceable)",
+      "temperature": "20.2 °C",
+      "humidity": "48.5 % RH",
+      "linearityError": "0.04 mg (Allowed: 0.10 mg)",
+      "repeatabilityStdDev": "0.02 mg",
+      "result": "PASSED_CALIBRATION",
+      "officerRemarks": "Instrument complies with OIML R76 Class I specifications. Recommended for statutory stamping by Legal Metrology Department.",
+      "certificateUrl": "#",
+      "technician": "Dr. V. K. Ramanathan, Principal Metrologist"
+    },
+    {
       "id": "GATC-REP-2026-03",
       "labCode": "GATC-DL-001",
       "labName": "National Metrology Standards Lab - GATC North",
@@ -1614,6 +1633,14 @@
     }
   ],
   "auditLogs": [
+    {
+      "id": "LOG-2026-3523",
+      "timestamp": "08/09/2026, 15:04:58 IST",
+      "actor": "National Metrology Standards Lab - GATC North",
+      "action": "GATC_LAB_CALIBRATION_ISSUED",
+      "details": "GATC Calibration Report GATC-REP-2026-04 generated for Sartorius Secura 225D-1S Micro-Balance (SR-2025-7890)",
+      "hash": "SHA256:c75000dc62d2..."
+    },
     {
       "id": "LOG-2026-7104",
       "timestamp": "9/7/2026, 1:21:10 PM IST",

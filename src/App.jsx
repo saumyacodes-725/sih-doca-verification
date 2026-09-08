@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 import DemoWalkthroughBar from './components/common/DemoWalkthroughBar';
+import HelpChatBot from './components/common/HelpChatBot';
 import { useAuth } from './context/AuthContext';
 
 // Public Pages
@@ -120,6 +121,9 @@ export default function App() {
 
       {/* Government Footer */}
       <Footer />
+
+      {/* Floating Help Assistant */}
+      <HelpChatBot />
     </div>
   );
 }
