@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import { useLanguage } from '../../context/LanguageContext';
 import QRScannerModal from './QRScannerModal';
 
 const ROLE_OPTIONS = [
@@ -12,10 +13,11 @@ const ROLE_OPTIONS = [
 ];
 
 export default function Header() {
-  const { currentRole, currentUser, logout, handleResetData, ROLE_PROFILES } = useAuth();
+  const { currentRole, currentUser, logout, showToast, handleResetData, ROLE_PROFILES } = useAuth();
+  const { language, switchLanguage, supportedLanguages } = useLanguage();
+  const currentLanguage = supportedLanguages.find((l) => l.code === language) || supportedLanguages[0];
   const location = useLocation();
   const navigate = useNavigate();
-  const [lang, setLang] = useState('EN');
   const [showQRScanner, setShowQRScanner] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -63,13 +65,38 @@ export default function Header() {
             <span className="text-light-50">
               National Consumer Helpline: <strong className="text-warning">1915</strong>
             </span>
-            <button
-              onClick={() => setLang(lang === 'EN' ? 'HI' : 'EN')}
-              className="btn btn-sm btn-outline-light py-0 px-2"
-              title="Toggle Language"
-            >
-              {lang === 'EN' ? 'हिन्दी' : 'English'}
-            </button>
+            {/* Multilingual Language Switcher */}
+            <div className="dropdown no-translate">
+              <button
+                className="btn btn-sm btn-warning text-dark fw-bold py-0 px-2 dropdown-toggle no-translate"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style={{ fontSize: '0.78rem' }}
+              >
+                {currentLanguage.nativeLabel}
+              </button>
+              <ul className="dropdown-menu dropdown-menu-end shadow-sm no-translate">
+                {supportedLanguages.map((l) => (
+                  <li key={l.code}>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        switchLanguage(l.code);
+                        showToast(l.toastMsg, 'info');
+                      }}
+                      className={`dropdown-item d-flex align-items-center justify-content-between no-translate fw-bold ${
+                        language === l.code ? 'bg-warning-subtle' : ''
+                      }`}
+                      title={`View Portal in ${l.label} (${l.nativeLabel})`}
+                    >
+                      {l.nativeLabel}
+                      {language === l.code && <i className="bi bi-check-lg text-warning-emphasis"></i>}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <button
               onClick={() => setShowQRScanner(true)}
               className="btn btn-sm btn-outline-info py-0 px-2"

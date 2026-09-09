@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import Stripe from 'stripe';
 import Application from '../models/Application.js';
 import Instrument from '../models/Instrument.js';
 import Notification from '../models/Notification.js';
@@ -6,6 +7,7 @@ import User from '../models/User.js';
 import { authenticate, requireRole } from '../middleware/auth.js';
 import { nextId } from '../utils/ids.js';
 import { recordVerification } from '../services/verificationService.js';
+import { calculateFee, formatRupees } from '../utils/fee.js';
 
 const router = Router();
 
@@ -36,6 +38,37 @@ router.post('/', authenticate, requireRole('business', 'admin'), async (req, res
   const instrument = await Instrument.findById(body.instrumentId);
   if (!instrument) return res.status(400).json({ error: 'instrumentId does not reference a known instrument' });
 
+  // When the Stripe gateway is configured, a real, verified payment is
+  // mandatory — re-fetch and re-check the Checkout Session here rather than
+  // trusting a prior /api/payments/verify call, since that response never
+  // touches this route otherwise. Without gateway keys configured, fall
+  // back to the original simulated Bharatkosh receipt so the app still
+  // works out of the box.
+  const gatewayConfigured = Boolean(process.env.STRIPE_SECRET_KEY);
+  let feeTransactionId;
+  let paymentStatus;
+  const fee = calculateFee(instrument);
+
+  if (gatewayConfigured) {
+    const { stripe_session_id } = body;
+    if (!stripe_session_id) {
+      return res.status(402).json({ error: 'Payment required: missing Stripe session confirmation' });
+    }
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+    const session = await stripe.checkout.sessions.retrieve(stripe_session_id);
+    if (session.payment_status !== 'paid') {
+      return res.status(402).json({ error: 'Payment verification failed' });
+    }
+    if (session.metadata?.instrumentId !== instrument._id) {
+      return res.status(402).json({ error: 'Payment session does not match this instrument' });
+    }
+    feeTransactionId = session.payment_intent;
+    paymentStatus = 'PAID';
+  } else {
+    feeTransactionId = `TXN-BHARATKOSH-${Math.floor(1000000 + Math.random() * 9000000)}`;
+    paymentStatus = 'PAID';
+  }
+
   const id = await nextId(Application, 'APP-2026', 3);
   const now = today();
   const nowTime = timeNow();
@@ -56,14 +89,14 @@ router.post('/', authenticate, requireRole('business', 'admin'), async (req, res
     state: instrument.state,
     district: instrument.district,
     submittedDate: now,
-    feeAmount: body.feeAmount || 'Rs. 1,200',
-    feeBreakdown: body.feeBreakdown || {
-      verificationFee: 'Rs. 1,000',
-      stampingSealFee: 'Rs. 100',
-      portalProcessingFee: 'Rs. 100'
+    feeAmount: formatRupees(fee.total),
+    feeBreakdown: {
+      verificationFee: formatRupees(fee.verification),
+      stampingSealFee: formatRupees(fee.seal),
+      portalProcessingFee: formatRupees(fee.portal)
     },
-    feeTransactionId: `TXN-BHARATKOSH-${Math.floor(1000000 + Math.random() * 9000000)}`,
-    paymentStatus: 'PAID',
+    feeTransactionId,
+    paymentStatus,
     remarks: body.remarks || 'Standard online application submitted with online Bharatkosh payment.',
     history: [{ date: `${now} ${nowTime}`, event: 'Application submitted online with fee payment receipt' }]
   });

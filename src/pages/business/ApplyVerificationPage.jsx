@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
-import { getInstruments, submitApplication } from '../../services/storageService';
+import {
+  getInstruments,
+  submitApplication,
+  getPaymentGatewayStatus,
+  createPaymentOrder,
+  verifyPayment
+} from '../../services/storageService';
 
 export default function ApplyVerificationPage() {
   const [searchParams] = useSearchParams();
@@ -26,6 +32,14 @@ export default function ApplyVerificationPage() {
   const [remarks, setRemarks] = useState('Annual re-verification requested. Instrument available at site.');
   const [showPaymentModal, setShowPaymentModal] = useState(false);
   const [paymentProcessing, setPaymentProcessing] = useState(false);
+  const [gatewayConfigured, setGatewayConfigured] = useState(false);
+  const [pendingPaymentHandled, setPendingPaymentHandled] = useState(false);
+
+  useEffect(() => {
+    getPaymentGatewayStatus()
+      .then((res) => setGatewayConfigured(Boolean(res?.configured)))
+      .catch(() => setGatewayConfigured(false));
+  }, []);
 
   useEffect(() => {
     if (preSelectedInstId) {
@@ -64,30 +78,105 @@ export default function ApplyVerificationPage() {
       showToast('Please register or select an instrument first', 'danger');
       return;
     }
-    setShowPaymentModal(true);
+    if (gatewayConfigured) {
+      handleRealPayment();
+    } else {
+      setShowPaymentModal(true);
+    }
   };
+
+  // Shared submission step for both the real Stripe flow and the simulated
+  // Bharatkosh fallback. `overrides` lets the post-redirect Stripe return
+  // (see the effect below) supply the instrument/application-type/remarks
+  // explicitly, since the page remounts fresh after leaving for Stripe's
+  // hosted checkout and loses the original form's React state.
+  const finalizeSubmission = async (paymentFields = {}, overrides = {}) => {
+    const inst = overrides.selectedInst || selectedInst;
+    const newApp = await submitApplication({
+      instrumentId: inst.id,
+      applicantName: currentUser.company || 'Apex Weighing & Logistics Ltd',
+      applicantEmail: currentUser.email || 'compliance@apexlogistics.mock',
+      applicationType: overrides.applicationType ?? applicationType,
+      premiseAddress: inst.location,
+      remarks: overrides.remarks ?? `${remarks} | Preferred Slot: ${preferredDate} (${preferredSlot})`,
+      ...paymentFields
+    });
+    showToast(`Verification Application ${newApp.id} submitted with payment receipt!`, 'success');
+    navigate('/business/applications');
+  };
+
+  // Stripe Checkout is redirect-based (no client-side script needed) — the
+  // browser fully leaves the app, so the current form values are stashed in
+  // sessionStorage and restored by the effect below when Stripe redirects
+  // back to success_url.
+  const handleRealPayment = async () => {
+    setPaymentProcessing(true);
+    try {
+      const order = await createPaymentOrder(selectedInst.id);
+      sessionStorage.setItem(
+        'pendingVerificationApp',
+        JSON.stringify({
+          applicationType,
+          remarksFull: `${remarks} | Preferred Slot: ${preferredDate} (${preferredSlot})`
+        })
+      );
+      window.location.href = order.url;
+    } catch (error) {
+      setPaymentProcessing(false);
+      showToast(error.message || 'Could not start payment', 'danger');
+    }
+  };
+
+  // Handle the return trip from Stripe Checkout (?payment=success|cancelled).
+  useEffect(() => {
+    const paymentStatus = searchParams.get('payment');
+    if (!paymentStatus || pendingPaymentHandled) return;
+
+    if (paymentStatus === 'cancelled') {
+      setPendingPaymentHandled(true);
+      showToast('Payment cancelled', 'warning');
+      navigate('/business/apply', { replace: true });
+      return;
+    }
+
+    if (paymentStatus === 'success') {
+      if (myInstruments.length === 0) return; // wait for the instrument list to load first
+      const sessionId = searchParams.get('session_id');
+      const instrumentIdParam = searchParams.get('instrumentId');
+      const inst = myInstruments.find((i) => i.id === instrumentIdParam);
+
+      if (!sessionId || !inst) {
+        setPendingPaymentHandled(true);
+        showToast('Could not complete submission — missing payment details', 'danger');
+        navigate('/business/apply', { replace: true });
+        return;
+      }
+
+      setPendingPaymentHandled(true);
+      const stash = JSON.parse(sessionStorage.getItem('pendingVerificationApp') || '{}');
+
+      (async () => {
+        try {
+          await verifyPayment({ sessionId });
+          await finalizeSubmission(
+            { stripe_session_id: sessionId },
+            { selectedInst: inst, applicationType: stash.applicationType, remarks: stash.remarksFull }
+          );
+          sessionStorage.removeItem('pendingVerificationApp');
+        } catch (error) {
+          showToast(error.message || 'Payment verification failed', 'danger');
+          navigate('/business/apply', { replace: true });
+        }
+      })();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams, myInstruments, pendingPaymentHandled]);
 
   const handleConfirmPaymentAndSubmit = () => {
     setPaymentProcessing(true);
     setTimeout(async () => {
       try {
-        const newApp = await submitApplication({
-          instrumentId: selectedInst.id,
-          applicantName: currentUser.company || 'Apex Weighing & Logistics Ltd',
-          applicantEmail: currentUser.email || 'compliance@apexlogistics.mock',
-          applicationType: applicationType,
-          premiseAddress: selectedInst.location,
-          feeAmount: feeData.total,
-          feeBreakdown: {
-            verificationFee: feeData.verification,
-            stampingSealFee: feeData.seal,
-            portalProcessingFee: feeData.portal
-          },
-          remarks: `${remarks} | Preferred Slot: ${preferredDate} (${preferredSlot})`
-        });
-
-        showToast(`Verification Application ${newApp.id} submitted with Bharatkosh payment receipt!`, 'success');
-        navigate('/business/applications');
+        await finalizeSubmission();
       } catch (error) {
         showToast(error.message || 'Failed to submit application', 'danger');
       } finally {
@@ -258,10 +347,14 @@ export default function ApplyVerificationPage() {
 
               <div className="d-flex justify-content-between align-items-center pt-2">
                 <div className="small text-muted">
-                  <i className="bi bi-shield-lock-fill text-success me-1"></i> Secured via Bharatkosh / SBI e-Pay
+                  {gatewayConfigured ? (
+                    <><i className="bi bi-shield-lock-fill text-success me-1"></i> Secured via Stripe (test mode)</>
+                  ) : (
+                    <><i className="bi bi-shield-lock-fill text-success me-1"></i> Secured via Bharatkosh / SBI e-Pay (simulated)</>
+                  )}
                 </div>
-                <button type="submit" className="btn btn-warning text-dark fw-bold px-4 shadow">
-                  Proceed to Online Payment ({feeData.total}) &rarr;
+                <button type="submit" className="btn btn-warning text-dark fw-bold px-4 shadow" disabled={paymentProcessing}>
+                  {paymentProcessing ? 'Starting payment…' : `Proceed to Online Payment (${feeData.total}) →`}
                 </button>
               </div>
             </div>

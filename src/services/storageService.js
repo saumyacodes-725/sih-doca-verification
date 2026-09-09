@@ -3,7 +3,12 @@ import { INITIAL_MOCK_DATA } from '../data/mockData.js';
 const STORAGE_KEY = 'emaap_metrology_db_v2';
 const EVENT_NAME = 'emaap_db_updated';
 const TOKEN_KEY = 'emaap_token';
-const API_BASE_URL = import.meta.env?.VITE_API_BASE_URL || 'http://127.0.0.1:5000/api';
+// In production builds the frontend and API are served from the same
+// deployment (Vercel rewrites /api/* to the serverless function), so a
+// relative path resolves correctly no matter which domain it's hosted at —
+// no hardcoded prod URL needed. Local dev keeps talking to the separate
+// Express server on :5000. VITE_API_BASE_URL still overrides both when set.
+const API_BASE_URL = import.meta.env?.VITE_API_BASE_URL || (import.meta.env?.PROD ? '/api' : 'http://127.0.0.1:5000/api');
 
 function requestApi(method, path, body) {
   if (typeof window === 'undefined' || typeof XMLHttpRequest === 'undefined') {
@@ -165,6 +170,19 @@ export function getApplicationById(id) {
 
 export function submitApplication(appData) {
   return apiFetch('/applications', { method: 'POST', body: appData });
+}
+
+// ----------------- PAYMENTS -----------------
+export function getPaymentGatewayStatus() {
+  return apiFetch('/payments/status', { auth: false });
+}
+
+export function createPaymentOrder(instrumentId) {
+  return apiFetch('/payments/create-order', { method: 'POST', body: { instrumentId } });
+}
+
+export function verifyPayment(payload) {
+  return apiFetch('/payments/verify', { method: 'POST', body: payload });
 }
 
 export function assignAndScheduleApplication(appId, { officerId, scheduledDate, timeSlot, remarks }) {
