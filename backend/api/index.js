@@ -1,5 +1,5 @@
-import app from '../backend/app.js';
-import { connectDb } from '../backend/src/config/db.js';
+import app from '../app.js';
+import { connectDb } from '../src/config/db.js';
 
 // Vercel keeps a warm container between invocations, so cache the
 // connection promise at module scope instead of reconnecting on every
