@@ -3,8 +3,16 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import QRScannerModal from './QRScannerModal';
 
+const ROLE_OPTIONS = [
+  { key: 'public', label: 'Citizen', color: 'info' },
+  { key: 'business', label: 'Trader', color: 'warning' },
+  { key: 'lmo', label: 'LMO Officer', color: 'primary' },
+  { key: 'gatc', label: 'GATC Lab', color: 'success' },
+  { key: 'admin', label: 'Admin', color: 'danger' }
+];
+
 export default function Header() {
-  const { currentRole, currentUser, switchRole, logout, handleResetData, ROLE_PROFILES } = useAuth();
+  const { currentRole, currentUser, logout, handleResetData, ROLE_PROFILES } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
   const [lang, setLang] = useState('EN');
@@ -17,13 +25,16 @@ export default function Header() {
     return '';
   };
 
+  // Switching to a different role must go through a real login — this only
+  // jumps to /login (logging out first if a session is active) rather than
+  // silently authenticating as the new role.
   const handleRoleChange = (role) => {
-    switchRole(role);
-    if (role === 'business') navigate('/business');
-    else if (role === 'admin') navigate('/admin');
-    else if (role === 'lmo') navigate('/lmo');
-    else if (role === 'gatc') navigate('/gatc');
-    else navigate('/');
+    if (role === currentRole) {
+      navigate(role === 'public' ? '/' : `/${role}`);
+      return;
+    }
+    logout();
+    navigate(role === 'public' ? '/' : '/login');
   };
 
   return (
@@ -83,59 +94,37 @@ export default function Header() {
               </div>
             </div>
 
-            <div>
-              <div className="text-uppercase text-secondary fw-semibold" style={{ fontSize: '0.72rem', letterSpacing: '0.5px' }}>
-                Ministry of Consumer Affairs, Food & Public Distribution
-              </div>
-              <div className="portal-brand-title fs-4 lh-sm text-navy-dark fw-bold">
-                Trust Scale <span className="text-primary fw-normal">| Department of Consumer Affairs (DoCA)</span>
-              </div>
-              <div className="portal-brand-subtitle text-muted small">
-                National Online Verification & Stamping Portal for Weighing and Measuring Instruments
-              </div>
+            <div className="portal-brand-title fs-4 lh-sm text-navy-dark fw-bold">
+              Trust Scale
             </div>
           </Link>
 
           {/* Role Switcher & Profile Widget */}
-          <div className="d-flex align-items-center gap-2">
-            {/* Quick 5-Role Buttons for Instant Testing */}
-            <div className="d-none d-xl-flex align-items-center gap-1 border rounded p-1 bg-light">
-              <span className="small text-muted me-1 fw-bold px-1" style={{ fontSize: '0.7rem' }}>ROLE:</span>
+          <div className="d-flex align-items-center gap-3 ms-auto pe-1">
+            {/* Role Login Dropdown */}
+            <div className="dropdown">
               <button
-                onClick={() => handleRoleChange('public')}
-                className={`btn btn-sm py-1 px-2 ${currentRole === 'public' ? 'btn-info text-white fw-bold' : 'btn-light'}`}
+                className="btn btn-sm btn-outline-secondary py-1 px-2 dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
                 style={{ fontSize: '0.75rem' }}
               >
-                Citizen
+                Role Login
               </button>
-              <button
-                onClick={() => handleRoleChange('business')}
-                className={`btn btn-sm py-1 px-2 ${currentRole === 'business' ? 'btn-warning text-dark fw-bold' : 'btn-light'}`}
-                style={{ fontSize: '0.75rem' }}
-              >
-                Trader
-              </button>
-              <button
-                onClick={() => handleRoleChange('lmo')}
-                className={`btn btn-sm py-1 px-2 ${currentRole === 'lmo' ? 'btn-primary text-white fw-bold' : 'btn-light'}`}
-                style={{ fontSize: '0.75rem' }}
-              >
-                LMO Officer
-              </button>
-              <button
-                onClick={() => handleRoleChange('gatc')}
-                className={`btn btn-sm py-1 px-2 ${currentRole === 'gatc' ? 'btn-success text-white fw-bold' : 'btn-light'}`}
-                style={{ fontSize: '0.75rem' }}
-              >
-                GATC Lab
-              </button>
-              <button
-                onClick={() => handleRoleChange('admin')}
-                className={`btn btn-sm py-1 px-2 ${currentRole === 'admin' ? 'btn-danger text-white fw-bold' : 'btn-light'}`}
-                style={{ fontSize: '0.75rem' }}
-              >
-                Admin
-              </button>
+              <ul className="dropdown-menu dropdown-menu-end shadow-sm">
+                {ROLE_OPTIONS.map((r) => (
+                  <li key={r.key}>
+                    <button
+                      onClick={() => handleRoleChange(r.key)}
+                      className={`dropdown-item d-flex align-items-center justify-content-between ${currentRole === r.key ? `bg-${r.color}-subtle fw-bold` : ''}`}
+                    >
+                      {r.label}
+                      {currentRole === r.key && <i className={`bi bi-check-lg text-${r.color}`}></i>}
+                    </button>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             {/* User Profile Card */}

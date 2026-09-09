@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../../context/AuthContext';
 import QRScannerModal from '../../components/common/QRScannerModal';
 
 export default function LandingPage() {
   const navigate = useNavigate();
-  const { switchRole } = useAuth();
   const [searchQuery, setSearchQuery] = useState('');
   const [showQRModal, setShowQRModal] = useState(false);
 
@@ -15,11 +13,6 @@ export default function LandingPage() {
     navigate(`/verify?q=${encodeURIComponent(searchQuery.trim())}`);
   };
 
-  const handleRoleQuickJump = (role, path) => {
-    switchRole(role);
-    navigate(path);
-  };
-
   return (
     <div className="landing-page-wrapper">
       {/* Hero Section */}
@@ -27,10 +20,6 @@ export default function LandingPage() {
         <div className="container py-4">
           <div className="row align-items-center g-4">
             <div className="col-lg-7">
-              <div className="d-inline-flex align-items-center gap-2 px-3 py-1 bg-white bg-opacity-10 rounded-pill mb-3 border border-light border-opacity-25">
-                <span className="badge bg-warning text-dark fw-bold">NATIONAL PORTAL</span>
-                <span className="small">Department of Consumer Affairs | Legal Metrology Division</span>
-              </div>
               <h1 className="display-5 fw-bold mb-3 lh-sm">
                 National Online Verification & Stamping Portal for Weights & Measures
               </h1>
@@ -38,37 +27,50 @@ export default function LandingPage() {
                 Ensuring precision, trust, and consumer protection across India. Digitally verify commercial weighing scales, fuel dispensers, weighbridges, and analytical balances with tamper-evident QR verification.
               </p>
 
-              {/* Instant Verification Search Box */}
-              <div className="bg-white p-3 rounded-3 shadow-lg text-dark mb-3">
-                <label className="form-label fw-bold text-navy-dark small mb-1">
-                  <i className="bi bi-shield-check text-primary me-1"></i> Instant Public Certificate Verification
-                </label>
-                <form onSubmit={handleSearch} className="d-flex gap-2">
-                  <div className="input-group">
+              <div className="d-flex flex-wrap gap-3 text-light-50 small">
+                <span><i className="bi bi-check-circle-fill text-success me-1"></i> No login required</span>
+                <span><i className="bi bi-check-circle-fill text-success me-1"></i> Instant national registry lookup</span>
+                <span><i className="bi bi-check-circle-fill text-success me-1"></i> Tamper-evident QR seals</span>
+              </div>
+            </div>
+
+            {/* Instant Verification Search Card */}
+            <div className="col-lg-5">
+              <div className="bg-white p-4 rounded-4 shadow-lg text-dark h-100 d-flex flex-column justify-content-center">
+                <h5 className="fw-bold text-navy-dark mb-1 d-flex align-items-center gap-2">
+                  <i className="bi bi-shield-check text-primary fs-5"></i> Instant Public Certificate Verification
+                </h5>
+                <p className="text-muted small mb-3">
+                  Enter the certificate number, stamping seal tag, or serial number printed on the instrument — no account needed.
+                </p>
+                <form onSubmit={handleSearch} className="d-flex flex-column gap-2">
+                  <div className="input-group input-group-lg">
                     <span className="input-group-text bg-light border-end-0">
                       <i className="bi bi-search text-muted"></i>
                     </span>
                     <input
                       type="text"
                       className="form-control border-start-0 py-2"
-                      placeholder="Enter Certificate No, Stamping Seal, or Serial No (e.g. CERT-2026-001)"
+                      placeholder="e.g. CERT-2026-001"
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                     />
                   </div>
-                  <button type="submit" className="btn btn-primary fw-bold px-4">
-                    Verify
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setShowQRModal(true)}
-                    className="btn btn-warning fw-bold px-3 d-flex align-items-center gap-1"
-                    title="Scan QR code on physical scale"
-                  >
-                    <i className="bi bi-qr-code-scan"></i> <span className="d-none d-md-inline">Scan QR</span>
-                  </button>
+                  <div className="d-flex gap-2">
+                    <button type="submit" className="btn btn-primary btn-lg fw-bold flex-grow-1">
+                      Verify
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setShowQRModal(true)}
+                      className="btn btn-warning btn-lg fw-bold px-3 d-flex align-items-center gap-1"
+                      title="Scan QR code on physical scale"
+                    >
+                      <i className="bi bi-qr-code-scan"></i> <span className="d-none d-md-inline">Scan QR</span>
+                    </button>
+                  </div>
                 </form>
-                <div className="mt-2 text-muted small" style={{ fontSize: '0.75rem' }}>
+                <div className="mt-3 text-muted small">
                   Try sample identifiers:{' '}
                   <button
                     type="button"
@@ -92,80 +94,6 @@ export default function LandingPage() {
                     onClick={() => navigate('/certificate/CERT-2024-042')}
                   >
                     CERT-2024-042
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Hero Quick Role Launch Cards */}
-            <div className="col-lg-5">
-              <div className="p-4 bg-white bg-opacity-10 backdrop-blur rounded-4 border border-light border-opacity-25 shadow">
-                <h5 className="fw-bold mb-3 text-warning d-flex align-items-center gap-2">
-                  <i className="bi bi-person-workspace"></i> Official Role Portals
-                </h5>
-                <div className="d-grid gap-2">
-                  <button
-                    onClick={() => handleRoleQuickJump('business', '/business')}
-                    className="btn btn-light text-start p-3 d-flex align-items-center justify-content-between hover-shadow transition-all"
-                  >
-                    <div className="d-flex align-items-center gap-3">
-                      <div className="bg-warning-subtle text-warning-emphasis p-2 rounded-circle">
-                        <i className="bi bi-shop fs-5"></i>
-                      </div>
-                      <div>
-                        <strong className="d-block text-dark">Business Trader Portal</strong>
-                        <small className="text-muted">Register instruments & submit verification applications</small>
-                      </div>
-                    </div>
-                    <i className="bi bi-chevron-right text-muted"></i>
-                  </button>
-
-                  <button
-                    onClick={() => handleRoleQuickJump('lmo', '/lmo')}
-                    className="btn btn-light text-start p-3 d-flex align-items-center justify-content-between hover-shadow transition-all"
-                  >
-                    <div className="d-flex align-items-center gap-3">
-                      <div className="bg-primary-subtle text-primary p-2 rounded-circle">
-                        <i className="bi bi-patch-check-fill fs-5"></i>
-                      </div>
-                      <div>
-                        <strong className="d-block text-dark">Legal Metrology Officer (LMO)</strong>
-                        <small className="text-muted">Field digital checklist, MPE test table & stamping seals</small>
-                      </div>
-                    </div>
-                    <i className="bi bi-chevron-right text-muted"></i>
-                  </button>
-
-                  <button
-                    onClick={() => handleRoleQuickJump('gatc', '/gatc')}
-                    className="btn btn-light text-start p-3 d-flex align-items-center justify-content-between hover-shadow transition-all"
-                  >
-                    <div className="d-flex align-items-center gap-3">
-                      <div className="bg-success-subtle text-success p-2 rounded-circle">
-                        <i className="bi bi-cpu-fill fs-5"></i>
-                      </div>
-                      <div>
-                        <strong className="d-block text-dark">GATC Precision Test Lab</strong>
-                        <small className="text-muted">High precision calibration & laboratory test reports</small>
-                      </div>
-                    </div>
-                    <i className="bi bi-chevron-right text-muted"></i>
-                  </button>
-
-                  <button
-                    onClick={() => handleRoleQuickJump('admin', '/admin')}
-                    className="btn btn-light text-start p-3 d-flex align-items-center justify-content-between hover-shadow transition-all"
-                  >
-                    <div className="d-flex align-items-center gap-3">
-                      <div className="bg-danger-subtle text-danger p-2 rounded-circle">
-                        <i className="bi bi-shield-check fs-5"></i>
-                      </div>
-                      <div>
-                        <strong className="d-block text-dark">National Controller (Admin)</strong>
-                        <small className="text-muted">Dispatch, allocation, analytics & tamper-evident audit logs</small>
-                      </div>
-                    </div>
-                    <i className="bi bi-chevron-right text-muted"></i>
                   </button>
                 </div>
               </div>

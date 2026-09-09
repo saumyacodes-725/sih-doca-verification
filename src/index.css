@@ -130,6 +130,22 @@ body {
   top: 0;
 }
 
+.walkthrough-dropdown-menu {
+  min-width: 340px;
+  max-width: 380px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.walkthrough-dropdown-menu .dropdown-item {
+  white-space: normal;
+}
+
+.walkthrough-dropdown-menu .dropdown-item:hover,
+.walkthrough-dropdown-menu .dropdown-item:focus {
+  background-color: var(--gov-bg);
+}
+
 /* QR Code Scanner Laser Animation */
 .qr-scanner-viewfinder {
   width: 260px;

@@ -4,6 +4,7 @@ import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 import DemoWalkthroughBar from './components/common/DemoWalkthroughBar';
 import HelpChatBot from './components/common/HelpChatBot';
+import RequireRole from './components/common/RequireRole';
 import { useAuth } from './context/AuthContext';
 
 // Public Pages
@@ -83,36 +84,36 @@ export default function App() {
           <Route path="/login" element={<LoginPage />} />
 
           {/* Business Trader Routes */}
-          <Route path="/business" element={<BusinessDashboard />} />
-          <Route path="/business/instruments" element={<MyInstrumentsPage />} />
-          <Route path="/business/instruments/:id" element={<InstrumentDetailsPage />} />
-          <Route path="/business/register" element={<RegisterInstrumentPage />} />
-          <Route path="/business/applications" element={<VerificationApplicationsPage />} />
-          <Route path="/business/apply" element={<ApplyVerificationPage />} />
-          <Route path="/business/certificates" element={<CertificatesPage />} />
-          <Route path="/business/profile" element={<TraderProfilePage />} />
+          <Route path="/business" element={<RequireRole roles={['business']}><BusinessDashboard /></RequireRole>} />
+          <Route path="/business/instruments" element={<RequireRole roles={['business']}><MyInstrumentsPage /></RequireRole>} />
+          <Route path="/business/instruments/:id" element={<RequireRole roles={['business']}><InstrumentDetailsPage /></RequireRole>} />
+          <Route path="/business/register" element={<RequireRole roles={['business']}><RegisterInstrumentPage /></RequireRole>} />
+          <Route path="/business/applications" element={<RequireRole roles={['business']}><VerificationApplicationsPage /></RequireRole>} />
+          <Route path="/business/apply" element={<RequireRole roles={['business']}><ApplyVerificationPage /></RequireRole>} />
+          <Route path="/business/certificates" element={<RequireRole roles={['business']}><CertificatesPage /></RequireRole>} />
+          <Route path="/business/profile" element={<RequireRole roles={['business']}><TraderProfilePage /></RequireRole>} />
 
           {/* LMO Enforcement Routes */}
-          <Route path="/lmo" element={<LmoDashboard />} />
-          <Route path="/lmo/assigned" element={<AssignedVerificationsPage />} />
-          <Route path="/lmo/inspect/:appId" element={<InspectionFormPage />} />
-          <Route path="/lmo/inspect" element={<InspectionFormPage />} />
-          <Route path="/lmo/schedule" element={<LmoSchedulePage />} />
+          <Route path="/lmo" element={<RequireRole roles={['lmo']}><LmoDashboard /></RequireRole>} />
+          <Route path="/lmo/assigned" element={<RequireRole roles={['lmo']}><AssignedVerificationsPage /></RequireRole>} />
+          <Route path="/lmo/inspect/:appId" element={<RequireRole roles={['lmo']}><InspectionFormPage /></RequireRole>} />
+          <Route path="/lmo/inspect" element={<RequireRole roles={['lmo']}><InspectionFormPage /></RequireRole>} />
+          <Route path="/lmo/schedule" element={<RequireRole roles={['lmo']}><LmoSchedulePage /></RequireRole>} />
 
           {/* GATC Lab Routes */}
-          <Route path="/gatc" element={<GatcDashboard />} />
-          <Route path="/gatc/test/:appId" element={<LabTestPage />} />
-          <Route path="/gatc/test" element={<LabTestPage />} />
+          <Route path="/gatc" element={<RequireRole roles={['gatc']}><GatcDashboard /></RequireRole>} />
+          <Route path="/gatc/test/:appId" element={<RequireRole roles={['gatc']}><LabTestPage /></RequireRole>} />
+          <Route path="/gatc/test" element={<RequireRole roles={['gatc']}><LabTestPage /></RequireRole>} />
 
           {/* National Admin Routes */}
-          <Route path="/admin" element={<AdminDashboard />} />
-          <Route path="/admin/applications" element={<VerificationDeskPage />} />
-          <Route path="/admin/instruments" element={<InstrumentsRegistryPage />} />
-          <Route path="/admin/stakeholders" element={<StakeholdersPage />} />
-          <Route path="/admin/scheduling" element={<SchedulingPanelPage />} />
-          <Route path="/admin/certificates" element={<CertificatesRegistryPage />} />
-          <Route path="/admin/analytics" element={<AnalyticsPage />} />
-          <Route path="/admin/logs" element={<AuditLogsPage />} />
+          <Route path="/admin" element={<RequireRole roles={['admin']}><AdminDashboard /></RequireRole>} />
+          <Route path="/admin/applications" element={<RequireRole roles={['admin']}><VerificationDeskPage /></RequireRole>} />
+          <Route path="/admin/instruments" element={<RequireRole roles={['admin']}><InstrumentsRegistryPage /></RequireRole>} />
+          <Route path="/admin/stakeholders" element={<RequireRole roles={['admin']}><StakeholdersPage /></RequireRole>} />
+          <Route path="/admin/scheduling" element={<RequireRole roles={['admin']}><SchedulingPanelPage /></RequireRole>} />
+          <Route path="/admin/certificates" element={<RequireRole roles={['admin']}><CertificatesRegistryPage /></RequireRole>} />
+          <Route path="/admin/analytics" element={<RequireRole roles={['admin']}><AnalyticsPage /></RequireRole>} />
+          <Route path="/admin/logs" element={<RequireRole roles={['admin']}><AuditLogsPage /></RequireRole>} />
 
           {/* Catch-all Fallback */}
           <Route path="*" element={<Navigate to="/" replace />} />
