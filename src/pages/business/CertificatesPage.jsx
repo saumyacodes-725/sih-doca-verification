@@ -4,6 +4,7 @@ import { getCertificates } from '../../services/storageService';
 import { QRCodeSVG } from 'qrcode.react';
 import StatusBadge from '../../components/common/StatusBadge';
 import CertificateModal from '../../components/common/CertificateModal';
+import { getCertificateQrUrl } from '../../utils/certificateUrl';
 
 export default function CertificatesPage() {
   const { currentUser } = useAuth();
@@ -84,7 +85,7 @@ export default function CertificatesPage() {
 
                     <div className="my-2">
                       <QRCodeSVG
-                        value={`http://localhost:5173/certificate/${cert.id}`}
+                        value={getCertificateQrUrl(cert)}
                         size={110}
                         level="H"
                         includeMargin={false}

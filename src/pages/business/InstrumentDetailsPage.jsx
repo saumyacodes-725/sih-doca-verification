@@ -4,6 +4,7 @@ import { getInstrumentById, getCertificateById } from '../../services/storageSer
 import { QRCodeSVG } from 'qrcode.react';
 import StatusBadge from '../../components/common/StatusBadge';
 import CertificateModal from '../../components/common/CertificateModal';
+import { getCertificateQrUrl } from '../../utils/certificateUrl';
 
 export default function InstrumentDetailsPage() {
   const { id } = useParams();
@@ -204,7 +205,7 @@ export default function InstrumentDetailsPage() {
                 {activeCert ? (
                   <div className="p-3 border rounded bg-light d-inline-block shadow-sm mb-3">
                     <QRCodeSVG
-                      value={`http://localhost:5173/certificate/${activeCert.id}`}
+                      value={getCertificateQrUrl(activeCert)}
                       size={130}
                       level="H"
                       includeMargin={false}

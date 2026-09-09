@@ -299,7 +299,7 @@ export async function completeInspection(appId, inspectionResult) {
       testDetails: inspectionResult.testDetails || [],
       evidencePhotos: inspectionResult.evidencePhotos || [],
       digitalHash: `SHA256:${Array.from({ length: 64 }, () => Math.floor(Math.random() * 16).toString(16)).join('')}`,
-      qrVerificationUrl: `http://localhost:5173/certificate/${certId}`,
+      qrVerificationUrl: `/certificate/${certId}`,
       revocationReason: null,
       revokedAt: null
     };

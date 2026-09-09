@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { verifyCertificatePublic } from '../../services/storageService';
 import { QRCodeSVG } from 'qrcode.react';
 import StatusBadge from '../../components/common/StatusBadge';
+import { getCertificateQrUrl } from '../../utils/certificateUrl';
 
 export default function CertificateResultPage() {
   const { id } = useParams();
@@ -290,7 +291,7 @@ export default function CertificateResultPage() {
             <div className="col-md-3 text-center">
               <div className="p-2 border rounded bg-light d-inline-block shadow-sm">
                 <QRCodeSVG
-                  value={cert.qrVerificationUrl || window.location.href}
+                  value={getCertificateQrUrl(cert)}
                   size={100}
                   level="H"
                   includeMargin={false}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { QRCodeSVG } from 'qrcode.react';
 import StatusBadge from './StatusBadge';
+import { getCertificateQrUrl } from '../../utils/certificateUrl';
 
 export default function CertificateModal({ certificate, onClose }) {
   if (!certificate) return null;
@@ -213,7 +214,7 @@ export default function CertificateModal({ certificate, onClose }) {
               <div className="col-md-3 text-center">
                 <div className="p-2 border rounded bg-light d-inline-block shadow-sm">
                   <QRCodeSVG
-                    value={certificate.qrVerificationUrl || `http://localhost:5173/certificate/${certificate.id}`}
+                    value={getCertificateQrUrl(certificate)}
                     size={90}
                     level="H"
                     includeMargin={false}
